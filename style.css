@@ -1,0 +1,82 @@
+/* ==========================================================================
+	Index Stylings
+========================================================================== */ 
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Avenir Next;
+	background-color: #edf4f7;
+	color: #333333;
+}
+
+h1 {
+	margin-top: 20px;
+	font-size: 25px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: underline;
+	color: #333333;
+}
+
+.header {
+	background-color: #004466;
+	color: #FFFFFF;
+	font-size: 40px;
+	/*font-weight: 600;*/
+	padding: 10px 15px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#notifications {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 20%;
+	margin-left: 20px;
+	background-color: #edf4f7;
+	/*border: solid;*/
+	border-left: solid;
+	border-width: 5px;
+	border-color: #004466;
+}
+
+#notifications p {
+	background-color: #FFFFFF;
+	margin: 15px;
+	padding: 5px;
+}
+
+#notifications i {
+	padding: 5px;
+	top: 0;
+	left: 0;
+}
+
+#search-bar {
+	margin: 10px;
+	padding-left: 10px;
+	background-color: #FFFFFF;
+	font-size: 25px;
+	color: #333333;
+	height: 40px;
+	width: 50%;
+	border: none;
+}
+
+#create-new {
+	margin:10px;
+	background-color: #004466;
+	color: #FFFFFF;
+	border: none;
+	width: 20%;
+	height: 40px;
+	font-size: 25px;
+	text-align: left;
+	font-style: normal;
+}
