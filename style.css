@@ -31,6 +31,10 @@ h1 {
 	font-weight: bold;
 }
 
+.subpage {
+	width: 80%;
+}
+
 #notifications {
 	z-index: 2;
 	position: absolute;
