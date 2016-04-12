@@ -19,6 +19,12 @@ h1 {
 	color: #333333;
 }
 
+h3 {
+	font-size: 30px;
+	margin: 0px;
+	padding: 5px;
+}
+
 .header {
 	background-color: #004466;
 	color: #FFFFFF;
@@ -31,12 +37,18 @@ h1 {
 	font-weight: bold;
 }
 
+.right {
+	right-mar/*gin: 0px;
+	margin-left: 120px;
+	align-con*/tent: right;
+	float: right;
+}
+
 .subpage {
 	width: 80%;
 }
 
 #notifications {
-	z-index: 2;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -44,22 +56,38 @@ h1 {
 	width: 20%;
 	margin-left: 20px;
 	background-color: #edf4f7;
-	/*border: solid;*/
 	border-left: solid;
 	border-width: 5px;
 	border-color: #004466;
 }
 
-#notifications p {
+.notification {
 	background-color: #FFFFFF;
-	margin: 15px;
-	padding: 5px;
+	padding: 10px;
+	margin: 10px;
 }
 
-#notifications i {
+.notification p {
+	background-color: #FFFFFF;
+	/*margin: 15px;*/
 	padding: 5px;
-	top: 0;
-	left: 0;
+	margin: 1px;
+}
+
+.notification i {
+	padding: 1px;
+	/*top: 0;*/
+	/*left: 0;*/
+}
+
+.content {
+	position: absolute;
+	width: 100%;
+}
+
+#actions-bar {
+	/*position: absolute;*/
+	width: 100%;
 }
 
 #search-bar {
@@ -74,7 +102,7 @@ h1 {
 }
 
 #create-new {
-	margin:10px;
+	padding-left: 10px;
 	background-color: #004466;
 	color: #FFFFFF;
 	border: none;
@@ -83,4 +111,33 @@ h1 {
 	font-size: 25px;
 	text-align: left;
 	font-style: normal;
+	margin: 8px;
 }
+
+#create-new:hover {
+	background-color: #00334d;
+	cursor: pointer;
+}
+
+.team {
+	z-index: 3;
+	background-color: #FFFFFF;
+	margin: 10px;
+	margin-right: 27%;
+	border: solid;
+	border-width: 2px;
+	border-color: #FFFFFF;
+}
+
+.team:hover {
+	border: solid;
+	border-width: 2px;
+	border-color: #004466;
+	cursor: pointer;
+}
+
+.team p {
+	padding: 3px;
+	margin: 0px;
+}
+

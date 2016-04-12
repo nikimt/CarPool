@@ -10,14 +10,8 @@
 <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!-- Semantic-ui stylesheet -->
-<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
-
-<!-- semantic-ui -->
-<script src="semantic/dist/semantic.min.js"></script>
 
 </head>  
 
@@ -26,16 +20,38 @@
 	<div class="header">Car<span class="bold">Pool</span></div>
     <div id="notifications">
         <h1>Notifications</h1>
-        <p>
+        <div class="notification">
             <i class="material-icons">announcement</i>
-            <a>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</a>
-        </p>
+            <i class="material-icons right">close</i>
+            <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
+        </div>
     </div>
-    <div id="actions-bar">
-        <input id="search-bar" type="text" placeholder="Search"></input>
-        <input id="create-new" type="button" value="+ Create New"></input>
+	<div class="content">
+        <div id="actions-bar">
+            <input id="search-bar" type="text" placeholder="Search"></input>
+            <input id="create-new" type="button" value="+ Create New"></input>
+        </div>
+        <div class="team">
+            <h3>The Yellow Sox Baseball</h3>
+            <p>26 members</p>
+            <p>Tues 5-7pm, Thurs 5-7pm</p>
+        </div>  
+        <div class="team" onclick="location.href='http://www.google.com';">
+            <h3>The Pink Socks Baseball</h3>
+            <p>25 members</p>
+            <p>Tues 5-7pm, Thurs 5-7pm</p>
+        </div> 
+        <div class="team">
+            <h3>Orange Bruins Baseball Team</h3>
+            <p>23 members</p>
+            <p>Tues 5-7pm, Thurs 5-7pm</p>
+        </div> 
+        <div class="team">
+            <h3>Sunflower Elementary Afterschool Baseball</h3>
+            <p>30 members</p>
+            <p>Tues 5-7pm, Thurs 5-7pm</p>
+        </div> 
     </div>
-	<div class="content"></div>
 
 </body>
 
