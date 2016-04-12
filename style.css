@@ -33,6 +33,11 @@ h3 {
 	padding: 10px 15px;
 }
 
+.header a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 .bold {
 	font-weight: bold;
 }
