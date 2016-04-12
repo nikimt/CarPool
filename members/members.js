@@ -1,21 +1,21 @@
 $(document).ready(function() {
     var members_list = [
         { name: 'Jane Style', img_src: '../images/hedgehog.jpg' },
-        { name: 'Cristie Clark', img_src: '../images/hedgehog.jpg' },
-        { name: 'Joanne Li', img_src: '../images/hedgehog.jpg' },
-        { name: 'Leslie Lemmelson', img_src: '../images/hedgehog.jpg' },
-        { name: 'Amy Lewis', img_src: '../images/hedgehog.jpg' },
-        { name: 'Jay Z.', img_src: '../images/hedgehog.jpg' },
-        { name: 'Adam Smith', img_src: '../images/hedgehog.jpg' },
-        { name: 'Jodie Walker', img_src: '../images/hedgehog.jpg' },
-        { name: 'Ellie Wright', img_src: '../images/hedgehog.jpg' },
-        { name: 'Georgia Markus', img_src: '../images/hedgehog.jpg' },
-        { name: 'Penelope Rose', img_src: '../images/hedgehog.jpg' },
-        { name: 'Tanya West', img_src: '../images/hedgehog.jpg' },
-        { name: 'Kim Stephens', img_src: '../images/hedgehog.jpg' },
-        { name: 'Karen Young', img_src: '../images/hedgehog.jpg' },
-        { name: 'Olga Rasmusen', img_src: '../images/hedgehog.jpg' },
-        { name: 'Clark Simpson', img_src: '../images/hedgehog.jpg' }
+        { name: 'Cristie Clark', img_src: '../images/hedgehog4.jpg' },
+        { name: 'Joanne Li', img_src: '../images/hedgehog5.jpg' },
+        { name: 'Leslie Lemmelson', img_src: '../images/hedgehog6.jpg' },
+        { name: 'Amy Lewis', img_src: '../images/hedgehog7.jpg' },
+        { name: 'Jay Z.', img_src: '../images/hedgehog8.jpg' },
+        { name: 'Adam Smith', img_src: '../images/hedgehog9.jpg' },
+        { name: 'Jodie Walker', img_src: '../images/hedgehog10.jpg' },
+        { name: 'Ellie Wright', img_src: '../images/hedgehog11.jpg' },
+        { name: 'Georgia Markus', img_src: '../images/hedgehog12.jpg' },
+        { name: 'Penelope Rose', img_src: '../images/hedgehog13.jpg' },
+        { name: 'Tanya West', img_src: '../images/hedgehog14.jpg' },
+        { name: 'Kim Stephens', img_src: '../images/hedgehog15.jpg' },
+        { name: 'Karen Young', img_src: '../images/hedgehog16.jpg' },
+        { name: 'Olga Rasmusen', img_src: '../images/hedgehog17.jpg' },
+        { name: 'Clark Simpson', img_src: '../images/cat.jpg' }
     ];
 
     generate_cards(members_list);

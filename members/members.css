@@ -1,7 +1,13 @@
+#members-list {
+    margin: 10px;
+}
+
 #members-list .card .header {
     background-color: #FFFFFF;
-    color: black;
-    font-size: 14px;
     /*font-weight: 600;*/
     padding: 10px 15px;
+}
+
+#members-list .card .content {
+    position: relative;
 }
