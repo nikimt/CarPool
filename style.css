@@ -42,7 +42,6 @@ h3 {
 }
 
 #notifications {
-	z-index: 2;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -50,8 +49,7 @@ h3 {
 	width: 20%;
 	margin-left: 20px;
 	background-color: #edf4f7;
-	/*border: solid;*/
-	border-left: solid;
+	border: solid;
 	border-width: 5px;
 	border-color: #004466;
 }
@@ -68,6 +66,16 @@ h3 {
 	left: 0;
 }
 
+.content {
+	position: absolute;
+	width: 100%;
+}
+
+#actions-bar {
+	/*position: absolute;*/
+	width: 100%;
+}
+
 #search-bar {
 	margin: 10px;
 	padding-left: 10px;
@@ -81,9 +89,6 @@ h3 {
 
 #create-new {
 	padding-left: 10px;
-	margin:10px;
-	/*margin-left: 37px;*/
-	/*margin-right: 25%;*/
 	background-color: #004466;
 	color: #FFFFFF;
 	border: none;
@@ -92,12 +97,23 @@ h3 {
 	font-size: 25px;
 	text-align: left;
 	font-style: normal;
+	margin: 8px;
 }
 
 .team {
+	z-index: 3;
 	background-color: #FFFFFF;
 	margin: 10px;
-	margin-right: 25%;
+	margin-right: 27%;
+	border: solid;
+	border-width: 2px;
+	border-color: #FFFFFF;
+}
+
+.team:hover {
+	border: solid;
+	border-width: 2px;
+	border-color: #004466;
 }
 
 .team p {
