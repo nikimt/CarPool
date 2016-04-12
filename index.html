@@ -16,8 +16,10 @@
 </head>  
 
 <body>
-
-	<div class="header">Car<span class="bold">Pool</span></div>
+<div id="index-page" class="page">
+	<div class="header">
+        <a href="./index.html">Car<span class="bold">Pool</a>
+    </span></div>
     <div id="notifications">
         <h1>Notifications</h1>
         <div class="notification">
@@ -28,31 +30,47 @@
     </div>
 	<div class="content">
         <div id="actions-bar">
-            <input id="search-bar" type="text" placeholder="Search"></input>
-            <input id="create-new" type="button" value="+ Create New"></input>
+            <input id="search-bar" type="text" placeholder="Search" onclick="searchClick();"></input>
+            <input id="create-new" type="button" value="+ Create New" onclick="searchClick();"></input>
         </div>
-        <div class="team">
-            <h3>The Yellow Sox Baseball</h3>
-            <p>26 members</p>
-            <p>Tues 5-7pm, Thurs 5-7pm</p>
+        <div id="empty-page">
+            <i class="material-icons">error</i>
+            <p>It looks like you don't have any teams yet!</p>
+            <p>To add a team, search their name or click <span class="bold">+ Create New</span></p>
+        </div>
+        <div class="teams hide">
+            <div class="team">
+                <h3>The Yellow Sox Baseball</h3>
+                <p>26 members</p>
+                <p>Tues 5-7pm, Thurs 5-7pm</p>
+            </div>  
+            <div class="team">
+                <h3>The Pink Socks Baseball</h3>
+                <p>25 members</p>
+                <p>Tues 5-7pm, Thurs 5-7pm</p>
+            </div> 
+            <div class="team" onclick="location.href='./team.html';">
+                <h3>Orange Bruins Baseball Team</h3>
+                <p>23 members</p>
+                <p>Tues 5-7pm, Thurs 5-7pm</p>
+            </div> 
+            <div class="team">
+                <h3>Sunflower Elementary Afterschool Baseball</h3>
+                <p>30 members</p>
+                <p>Tues 5-7pm, Thurs 5-7pm</p>
+            </div> 
         </div>  
-        <div class="team" onclick="location.href='http://www.google.com';">
-            <h3>The Pink Socks Baseball</h3>
-            <p>25 members</p>
-            <p>Tues 5-7pm, Thurs 5-7pm</p>
-        </div> 
-        <div class="team">
-            <h3>Orange Bruins Baseball Team</h3>
-            <p>23 members</p>
-            <p>Tues 5-7pm, Thurs 5-7pm</p>
-        </div> 
-        <div class="team">
-            <h3>Sunflower Elementary Afterschool Baseball</h3>
-            <p>30 members</p>
-            <p>Tues 5-7pm, Thurs 5-7pm</p>
-        </div> 
     </div>
-
+</div>
 </body>
+
+<script type="text/javascript">
+    
+    function searchClick() {
+        $('#empty-page').hide();
+        $('.teams').show();
+    }
+
+</script>
 
 </html>
