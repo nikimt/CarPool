@@ -8,6 +8,7 @@
 
 <!-- Load style sheets -->
 <link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="calendar.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
 
@@ -20,45 +21,47 @@
 <body>
 
 <div id="members-page" class="subpage">
-    <div class="content">
-        <table class="ui celled table">
-            <thead>March
-                <tr class='center aligned'><th class="single line">Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="selectable">
-                        <a href="#">1</a>
-                    </td>
-                    <td class="selectable">
-                        <a href="#">2</a>
-                    </td>
-                    <td class="selectable">
-                        <a href="#">3</a>
-                    </td>
-                    <td class="selectable">
-                        <a href="#">4</a>
-                    </td>
-                    <td class="selectable">
-                        <a href="#">5</a>
-                    </td>
-                    <td class="selectable">
-                        <a href="#">6</a>
-                    </td>
-                    <td class="selectable">
-                        <a href="#">7</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    
+    <div class="ui label">
+        <i class="calendar icon"></i> March
     </div>
+    <table class="ui seven column celled table">
+        <thead>
+            <tr class='center aligned'><th class="single line">Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class='calendar-row'>
+                <td class="selectable">
+                    <a href="#">1</a>
+                </td>
+                <td class="selectable">
+                    <a href="#">2</a>
+                </td>
+                <td class="selectable">
+                    <a href="#">3</a>
+                </td>
+                <td class="selectable">
+                    <a href="#">4</a>
+                </td>
+                <td class="selectable">
+                    <a href="#">5</a>
+                </td>
+                <td class="selectable">
+                    <a href="#">6</a>
+                </td>
+                <td class="selectable">
+                    <a href="#">7</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
