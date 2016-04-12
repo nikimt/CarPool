@@ -8,6 +8,7 @@
 
 <!-- Load style sheets -->
 <link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="overview.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
 
@@ -18,18 +19,25 @@
 </head>  
 
 <body>
-<div id="overview-page" class="subpage">
-	<div class="header">Car<span class="bold">Pool</span></div>
-	    <div class="header">Description</div>
-	    <p>Local middle school hockey team for the central Miami area. Head Coach Jim Terry.</p>
-	    <div class="header">Times</div>
+<div id="overview-page" class="subpage" style="width:100%; overflow:hidden">
+	<div id="text" style="width: 500px; float: left;">
+	    <div class="heading">Description</div>
+	    <br>
+	    <p>Local middle school baseball team for the central Miami area. Head Coach: Jim Terry.</p>
+	    <div class="heading">Times</div>
+	    <br>
 	    <p>Mon 3-5</p>
 	    <p>Tues 3-5</p>
 	    <p>Fri 3-5</p>
-	    <div class="header">Address</div>
+	    <div class="heading">Address</div>
+	    <br>
 	    <p>77 Christmas Way</p>
 	    <p>Miami, FL 32814</p>
-	<div class="content"></div>
+	    <br>
+    </div>
+    <div id="image" style="margin-left: 510px; width:515px;">
+    	<img src="../images/kids.jpg" style="width:100%;height:100%;">
+    </div>
 </div>
 
 </body>
