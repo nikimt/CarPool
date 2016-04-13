@@ -34,11 +34,7 @@ var get_visible_members = function(members_list, search_val) {
     var visible_members = [];
     for (var i = 0; i < members_list.length; i++) {
         var member = members_list[i];
-        console.log(member);
-        console.log(member.name);
-        console.log(member.name.indexOf(search_val));
         if (member.name.toLowerCase().indexOf(search_val) != -1) {
-            // console.log(member);
             visible_members.push(member);
         }
     }
@@ -58,6 +54,8 @@ var update_cards = function(visible_members) {
         }
         if (is_hide) {
             card_elt.hide();
+        } else {
+            card_elt.show();
         }
 
     }
