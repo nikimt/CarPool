@@ -5,3 +5,28 @@
 /*.month {
     font-size: large;
 }*/
+
+#team-page {
+    line-height: normal;
+    font-family: Avenir Next;
+}
+
+#team-page h2 {
+    line-height: normal;
+    font-family: Avenir Next;
+}
+
+#notifications {
+    line-height: normal;
+    font-family: Avenir Next;
+    padding-top: 20px;
+    font-size: 25px;
+    color: #333333;
+}
+
+#notifications h1 {
+    line-height: normal;
+    font-family: Avenir Next;
+    font-size: 25px;
+    color: #333333;
+}

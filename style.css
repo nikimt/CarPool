@@ -120,6 +120,10 @@ h3 {
 	margin: 0px;
 }
 
+.hide {
+	display: none;
+}
+
 /* ==========================================================================
 	Notification Stylings
 ========================================================================== */ 
@@ -158,9 +162,10 @@ h3 {
 	/*left: 0;*/
 }
 
-.hide {
-	display: none;
+.notifX {
+	cursor: pointer;
 }
+
 
 /* ==========================================================================
 	Team Stylings
@@ -185,6 +190,7 @@ h3 {
 	font-size: 20px;
 	width: 100px;
 	display: inline-block;
+	box-sizing: initial;
 	border-bottom: 6px solid #b9d4df;
 }
 
