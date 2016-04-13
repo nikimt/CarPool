@@ -42,9 +42,10 @@ var get_visible_members = function(members_list, search_val) {
 }
 
 var update_cards = function(visible_members) {
-    var cards = $('#members-page .ui.card');
-    for (var i = 0; i < cards.length; i++) {
-        var card_elt = $(cards[i]);
+    var columns = $('#members-list .column');
+    for (var i = 0; i < columns.length; i++) {
+        var column = $(columns[i]);
+        var card_elt = $(column.children()[0]);
         var content = $(card_elt.children()[1]);
         var is_hide = true;
         for (var j = 0; j < visible_members.length; j++) {
@@ -53,9 +54,9 @@ var update_cards = function(visible_members) {
             }
         }
         if (is_hide) {
-            card_elt.hide();
+            column.css("display", "none");
         } else {
-            card_elt.show();
+            column.css("display", "");
         }
 
     }
