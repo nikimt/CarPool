@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Load JavaScript libraries -->
-<script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../external_js/jquery-1.9.0.min.js"></script>
 
 
 </head>  
@@ -24,10 +24,10 @@
     </span></div>
     <div id="notifications">
         <h1>Notifications</h1>
-        <div class="notification">
+        <div class="notification" id="tohide">
             <i class="material-icons">announcement</i>
             <i class="material-icons right">close</i>
-            <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
+            <p>Your request to join the Orange Bruins Baseball team was approved. </p>
         </div>
     </div>
     <div class="content">
@@ -36,33 +36,37 @@
             <p id="overview" class="active">Overview</p>
             <p id="calendar">Calendar</p>
             <p id="members">Members</p>
+            <button type="button" onclick="myFunction()" id="button">Join</button>
         </div>
-
         <div id="overview-page" style="width:100%; overflow:hidden">
-        <div id="text" style="width: 500px; float: left;">
-            <div class="heading">Description</div>
-            <p>Local middle school baseball team for the central Miami area. Head Coach: Jim Terry.</p>
-            <div class="heading">Times</div>
-            <p>Mon 3-5</p>
-            <p>Tues 3-5</p>
-            <p>Fri 3-5</p>
-            <div class="heading">Address</div>
-            <p>77 Christmas Way</p>
-            <p>Miami, FL 32814</p>
-        </div>
-        <div id="image" style="margin-left: 500px; width:515px;">
-            <img src="../images/kids.jpg" style="width:100%;height:100%;">
+            <div id="text" style="width: 500px; float: left;">
+                <div class="heading">Description</div>
+                <p>Local middle school baseball team for the central Miami area. Head Coach: Jim Terry.</p>
+                <div class="heading">Times</div>
+                <p>Mon 3-5</p>
+                <p>Tues 3-5</p>
+                <p>Fri 3-5</p>
+                <div class="heading">Address</div>
+                <p>77 Christmas Way</p>
+                <p>Miami, FL 32814</p>
+            </div>
+            <div id="image" style="margin-left: 500px; width:515px;">
+                <img src="../images/kids.jpg" style="width:100%;height:100%;">
+            </div>
         </div>
     </div>
-
-
-    </div>
-
-
-
-
 </div>
 </body>
+
+<script>
+$(document).ready(function(){
+     $("#tohide").hide();
+});
+function myFunction() {
+    $("#button").hide();
+    $("#tohide").show();
+}
+</script>
 
 <script type="text/javascript">
     $('#overview').click(function() {
