@@ -1,3 +1,13 @@
+#team-page {
+    line-height: normal;
+    font-family: Avenir Next;
+}
+
+#members-page {
+    color: #333333;
+    background-color: #edf4f7;
+}
+
 #members-list {
     margin: 10px;
 }
