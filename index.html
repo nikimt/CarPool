@@ -24,7 +24,7 @@
         <h1>Notifications</h1>
         <div class="notification">
             <i class="material-icons">announcement</i>
-            <i class="material-icons right">close</i>
+            <i class="material-icons right notifX">close</i>
             <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
         </div>
     </div>
@@ -69,7 +69,11 @@
     function searchClick() {
         $('#empty-page').hide();
         $('.teams').show();
-    }
+    };
+
+    $('.notifX').on("click", function () {
+        $(this).parent().hide();
+    });
 
 </script>
 
