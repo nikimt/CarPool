@@ -1,0 +1,24 @@
+.heading {
+	/*background-color: #004466;*/
+	background-color: rgba(0, 68, 102,0.6);
+	color: #FFFFFF;
+	font-size: 40px;
+	padding: 15px 15px;
+}
+
+p {
+	padding-left: 30px;
+	font-size: 20px;
+}
+
+/*#text{
+	border-bottom: solid;
+	border-bottom-color: rgba(0, 68, 102,0.6);
+	border-bottom-width: 2px;
+}
+
+#image{
+	border-bottom: solid;
+	border-bottom-color: rgba(0, 68, 102,0.6);
+	border-bottom-width: 2px;
+}*/
