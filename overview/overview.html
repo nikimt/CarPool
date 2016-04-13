@@ -24,9 +24,9 @@
     </span></div>
     <div id="notifications">
         <h1>Notifications</h1>
-        <div class="notification" id="tohide">
+        <div class="notification hide" id="tohide">
             <i class="material-icons">announcement</i>
-            <i class="material-icons right">close</i>
+            <i class="material-icons right notifX">close</i>
             <p>Your request to join the Orange Bruins Baseball team was approved. </p>
         </div>
     </div>
@@ -59,26 +59,16 @@
 </body>
 
 <script>
-$(document).ready(function(){
-     $("#tohide").hide();
-});
-function myFunction() {
-    $("#button").hide();
-    $("#tohide").show();
-}
-</script>
-
-<script type="text/javascript">
-    $('#overview').click(function() {
-        $(this).addClass("active");
+    $(document).ready(function(){
+         $("#tohide").hide();
     });
+    function myFunction() {
+        $("#button").hide();
+        $("#tohide").show();
+    }
 
-    $('#calendar').click(function() {
-        $(this).addClass("active");
-    });
-
-    $('#members').click(function() {
-        $(this).addClass("active");
+    $('.notifX').on("click", function () {
+        $(this).parent().hide();
     });
 </script>
 
