@@ -1,10 +1,22 @@
 .calendar-row {
-    line-height: 100px;
+    line-height: 120px;
 }
 
-/*.month {
-    font-size: large;
-}*/
+#calendar_display .selectable {
+    height: 100px;
+}
+
+.last-month-date-number {
+    color: #C0C0C0;
+    /*height: 20px;*/
+    text-align: left;
+    vertical-align: top;
+    position: relative;
+}
+
+#seat-requests {
+    /*width: 25px;*/
+}
 
 #team-page {
     line-height: normal;
