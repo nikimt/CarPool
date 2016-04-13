@@ -1,5 +1,9 @@
+#calendar-page tbody {
+    vertical-align: top;
+}
+
 .calendar-row {
-    line-height: 120px;
+    height: 120px;
 }
 
 /*#calendar_display .selectable {
