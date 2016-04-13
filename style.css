@@ -48,40 +48,9 @@ h3 {
 
 .subpage {
 	width: 80%;
-}
-
-#notifications {
-	z-index: 3;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	width: 20%;
-	margin-left: 20px;
 	background-color: #edf4f7;
-	border-left: solid;
-	border-width: 5px;
-	border-color: #004466;
 }
 
-.notification {
-	background-color: #FFFFFF;
-	padding: 10px;
-	margin: 10px;
-}
-
-.notification p {
-	background-color: #FFFFFF;
-	/*margin: 15px;*/
-	padding: 5px;
-	margin: 1px;
-}
-
-.notification i {
-	padding: 1px;
-	/*top: 0;*/
-	/*left: 0;*/
-}
 
 .content {
 	width: 100%;
@@ -149,6 +118,44 @@ h3 {
 .team p {
 	padding: 3px;
 	margin: 0px;
+}
+
+/* ==========================================================================
+	Notification Stylings
+========================================================================== */ 
+
+#notifications {
+	z-index: 3;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 20%;
+	/*height: 180%;*/
+	margin-left: 20px;
+	background-color: #edf4f7;
+	border-left: solid;
+	border-width: 5px;
+	border-color: #004466;
+}
+
+.notification {
+	background-color: #FFFFFF;
+	padding: 10px;
+	margin: 10px;
+}
+
+.notification p {
+	background-color: #FFFFFF;
+	/*margin: 15px;*/
+	padding: 5px;
+	margin: 1px;
+}
+
+.notification i {
+	padding: 1px;
+	/*top: 0;*/
+	/*left: 0;*/
 }
 
 .hide {
