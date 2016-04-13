@@ -15,15 +15,41 @@
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="../external_js/jquery-1.9.0.min.js"></script>
 <script src="../semantic/dist/semantic.min.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
 
 </head>  
 
 <body>
 
+<div id="team-page" class="subpage">
+    <div class="header">
+        <a href="./index.html">Car<span class="bold">Pool</a>
+    </span></div>
+    <div id="notifications">
+        <h1>Notifications</h1>
+        <div class="notification">
+            <i class="material-icons">announcement</i>
+            <i class="material-icons right">close</i>
+            <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
+        </div>
+    </div>
+    <div class="content">
+        <div id="menu">
+            <h2>Orange Bruins Baseball Team</h2>
+            <p id="overview" onclick="location.href='../team.html';">Overview</p>
+            <p id="calendar" class="active" onclick="location.href='../calendar/calendar.html';">Calendar</p>
+            <p id="members" onclick="location.href='../members/members.html';">Members</p>
+        </div>
+    </div>
+</div>
+
 <div id="members-page" class="subpage">
     
-    <div class="ui label">
-        <i class="calendar icon"></i> March
+    <div class="ui label" id="month">
+        <i class="calendar icon"></i> 
+        <i class="chevron left icon"></i>
+        April &nbsp; &nbsp;
+        <i class="chevron right icon"></i>
     </div>
     <table class="ui seven column celled table">
         <thead>
@@ -37,7 +63,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class='calendar-row'>
+            <!-- <tr class='calendar-row'>
                 <td class="selectable">
                     <a href="#">1</a>
                 </td>
@@ -59,7 +85,7 @@
                 <td class="selectable">
                     <a href="#">7</a>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 </div>
