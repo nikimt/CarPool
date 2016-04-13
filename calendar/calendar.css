@@ -1,3 +1,7 @@
+#calendar-page {
+    padding: 15px;
+}
+
 #calendar-page tbody {
     vertical-align: top;
 }

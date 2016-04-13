@@ -26,10 +26,15 @@
 #members-page {
     color: #333333;
     background-color: #edf4f7;
+    padding: 10px;
+}
+
+#members-page .actions-bar {
+    margin-left: 4px;
 }
 
 #members-list {
-    margin: 10px;
+    margin: 0px;
 }
 
 #members-list .card .header {
