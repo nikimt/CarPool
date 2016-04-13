@@ -110,7 +110,7 @@ var load_members = function () {
             name: 'Jane Style', 
             img_src: '../images/hedgehog.jpg' ,
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'janestyle@email.com',
             child_name: 'Larry Style',
             home_address: '123 Some Street, FL 12345'
         },
@@ -119,7 +119,7 @@ var load_members = function () {
             name: 'Cristie Clark',
             img_src: '../images/hedgehog4.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'cclark@mydomain.com',
             child_name: 'Marcus Clark',
             home_address: '123 Some Street, FL 12345'
         },
@@ -128,7 +128,7 @@ var load_members = function () {
             name: 'Joanne Li',
             img_src: '../images/hedgehog5.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'jli761@gmail.com',
             child_name: 'Herman Li',
             home_address: '123 Some Street, FL 12345'
         },
@@ -137,7 +137,7 @@ var load_members = function () {
             name: 'Leslie Lemmelson',
             img_src: '../images/hedgehog6.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'leslemmelson@lemmelsonlabs.com',
             child_name: 'Harold Lemmelson',
             home_address: '123 Some Street, FL 12345'
         },
@@ -146,7 +146,7 @@ var load_members = function () {
             name: 'Amy Lewis',
             img_src: '../images/hedgehog7.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'iamamy@email.com',
             child_name: 'Abigail Lewis',
             home_address: '123 Some Street, FL 12345'
         },
@@ -155,7 +155,7 @@ var load_members = function () {
             name: 'Jay Z.',
             img_src: '../images/hedgehog8.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'jayz@boss.com',
             child_name: 'Blue Ivy Carter',
             home_address: '123 Some Street, FL 12345'
         },
@@ -164,7 +164,7 @@ var load_members = function () {
             name: 'Adam Smith',
             img_src: '../images/hedgehog9.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'atleastimnotjohn@generic.com',
             child_name: 'Ronald Smith',
             home_address: '123 Some Street, FL 12345'
         },
@@ -173,7 +173,7 @@ var load_members = function () {
             name: 'Jodie Walker',
             img_src: '../images/hedgehog10.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'jodiew2k16@email.com',
             child_name: 'Jamie Walker',
             home_address: '123 Some Street, FL 12345'
         },
@@ -182,7 +182,7 @@ var load_members = function () {
             name: 'Elizabeth Wright',
             img_src: '../images/hedgehog11.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'ewright@weright.com',
             child_name: 'Joe Wright',
             home_address: '123 Some Street, FL 12345'
         },
@@ -191,7 +191,7 @@ var load_members = function () {
             name: 'Georgia Markus',
             img_src: '../images/hedgehog12.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'georgia@florida.com',
             child_name: 'Virginia Markus',
             home_address: '123 Some Street, FL 12345'
         },
@@ -200,7 +200,7 @@ var load_members = function () {
             name: 'Penelope Rose',
             img_src: '../images/hedgehog13.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'penelope.rose@flowernames.com',
             child_name: 'Summer Rose',
             home_address: '123 Some Street, FL 12345'
         },
@@ -209,7 +209,7 @@ var load_members = function () {
             name: 'Tanya West',
             img_src: '../images/hedgehog14.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'tanyawest@cardinal.com',
             child_name: 'Kanye West',
             home_address: '123 Some Street, FL 12345'
         },
@@ -218,7 +218,7 @@ var load_members = function () {
             name: 'Kim Stephens',
             img_src: '../images/hedgehog15.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'kim@email.com',
             child_name: 'Tim Stephens',
             home_address: '123 Some Street, FL 12345'
         },
@@ -227,7 +227,7 @@ var load_members = function () {
             name: 'Karen Young',
             img_src: '../images/hedgehog16.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'karen@fountainofyouth.com',
             child_name: 'Wally Young',
             home_address: '123 Some Street, FL 12345'
         },
@@ -236,7 +236,7 @@ var load_members = function () {
             name: 'Olga Rasmusen',
             img_src: '../images/hedgehog17.jpg',
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'olgathewitch@email.com',
             child_name: 'Steve Rasmusen',
             home_address: '123 Some Street, FL 12345'
         },
@@ -245,7 +245,7 @@ var load_members = function () {
             name: 'Clark Simpson',
             img_src: '../images/cat.jpg' ,
             phone_number: '123-456-7890',
-            email_address: 'example@email.com',
+            email_address: 'iambetterthanbart@simpsons.com',
             child_name: 'Bart Simpson',
             home_address: '123 Some Street, FL 12345'
         }
