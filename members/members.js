@@ -19,7 +19,49 @@ $(document).ready(function() {
     ];
 
     generate_cards(members_list);
+
+    $('#search-bar').keyup(function(evt) {
+        var search_val = $(this).val();
+        console.log(search_val);
+        var visible_members = get_visible_members(members_list, search_val);
+        console.log(visible_members);
+        update_cards(visible_members);
+    });
+
 });
+
+var get_visible_members = function(members_list, search_val) {
+    var visible_members = [];
+    for (var i = 0; i < members_list.length; i++) {
+        var member = members_list[i];
+        console.log(member);
+        console.log(member.name);
+        console.log(member.name.indexOf(search_val));
+        if (member.name.toLowerCase().indexOf(search_val) != -1) {
+            // console.log(member);
+            visible_members.push(member);
+        }
+    }
+    return visible_members;
+}
+
+var update_cards = function(visible_members) {
+    var cards = $('#members-page .ui.card');
+    for (var i = 0; i < cards.length; i++) {
+        var card_elt = $(cards[i]);
+        var content = $(card_elt.children()[1]);
+        var is_hide = true;
+        for (var j = 0; j < visible_members.length; j++) {
+            if (content.text() == visible_members[j].name) {
+                is_hide = false;
+            }
+        }
+        if (is_hide) {
+            card_elt.hide();
+        }
+
+    }
+}
 
 var generate_cards = function(members_list) {
     var cards_html = "";
