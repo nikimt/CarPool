@@ -36,7 +36,7 @@
     <div class="content">
         <div id="menu">
             <h2>Orange Bruins Baseball Team</h2>
-            <p id="overview" onclick="location.href='../team.html';">Overview</p>
+            <p id="overview" onclick="location.href='../overview/overview.html';">Overview</p>
             <p id="calendar" class="active" onclick="location.href='../calendar/calendar.html';">Calendar</p>
             <p id="members" onclick="location.href='../members/members.html';">Members</p>
         </div>
@@ -63,27 +63,22 @@
             </tr>
         </thead>
         <tbody id='calendar_display'>
-            <!-- <tr class='calendar-row'>
+<!--             <tr class='calendar-row'>
                 <td class="selectable">
-                    <a href="#">1</a>
+                    <div class='date-number'> 1 </div>
+                    <div class='date-canvas'> </div>
                 </td>
                 <td class="selectable">
-                    <a href="#">2</a>
                 </td>
                 <td class="selectable">
-                    <a href="#">3</a>
                 </td>
                 <td class="selectable">
-                    <a href="#">4</a>
                 </td>
                 <td class="selectable">
-                    <a href="#">5</a>
                 </td>
                 <td class="selectable">
-                    <a href="#">6</a>
                 </td>
                 <td class="selectable">
-                    <a href="#">7</a>
                 </td>
             </tr> -->
         </tbody>
@@ -96,17 +91,27 @@
 
     <div class="ui special popup">
         <!-- <div class="header">Custom Header</div> -->
-        <div class="ui button">Ask for 
-            <div class="ui input" id='seat-requests'>
-                <input type="text" placeholder="">
+        <div>
+            <div id='rides-needed'> 1 need rides </br> </br>
+                <i class="huge user icon"></i> </br> </br>
             </div>
-            ride
+            <div id='open-seats'> 2 open seats </br> </br>
+                <i class ='huge shipping icon'></i> </br> </br>
+            </div>
         </div>
-        <div class="ui button">Offer 
-            <div class="ui input" id='seat-offers'>
-                <input type="text" placeholder="">
+        <div>
+            <div id='ride-requests'>Ask for 
+                <div class="ui input">
+                    <input type="text" placeholder="">
+                </div>
+                rides
             </div>
-            seat
+            <div id='seat-offers'>Offer 
+                <div class="ui input">
+                    <input type="text" placeholder="">
+                </div>
+                seats
+            </div>
         </div>
     </div>
 

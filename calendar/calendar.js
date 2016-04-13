@@ -22,6 +22,7 @@ $(document).ready(function() {
         .popup({
             on: 'click',
             popup: '.special.popup',
+            position: 'right center'
             // title: 'My favorite dog',
             // content: 'My favorite dog would like other dogs as much as themselves',
         })

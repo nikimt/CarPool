@@ -2,9 +2,9 @@
     line-height: 120px;
 }
 
-#calendar_display .selectable {
+/*#calendar_display .selectable {
     height: 100px;
-}
+}*/
 
 .last-month-date-number {
     color: #C0C0C0;
@@ -14,8 +14,45 @@
     position: relative;
 }
 
-#seat-requests {
-    /*width: 25px;*/
+.date-number {
+    vertical-align: top;
+    /*position: absolute;*/
+}
+
+.date-canvas {
+    /*position: absolute;*/
+}
+
+#rides-needed {
+    width: 200px;
+    float: left;
+    text-align: center;
+}
+
+#open-seats {
+    margin-left: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+#ride-requests {
+    width: 200px;
+    float: left;
+    text-align: center;
+}
+
+#seat-offers {
+    margin-left: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.ui.special.popup {
+    max-width: 600px !important;
+}
+
+.ui.input {
+    width: 50px;
 }
 
 #team-page {
