@@ -41,3 +41,15 @@
 #members-list .card .content {
     position: relative;
 }
+
+.ui.modal.members-modal {
+
+}
+
+.ui.modal.members-modal img {
+    width: 200px;
+}
+
+.ui.modal.members-modal .header {
+    background-color: #FFFFFF;
+}
