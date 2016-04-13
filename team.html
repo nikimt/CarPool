@@ -7,13 +7,11 @@
 <title>CarPool</title>
 
 <!-- Load style sheets -->
-<link rel="stylesheet" href="../style.css" />
-<link rel="stylesheet" href="overview.css" />
+<link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
-
 
 </head>  
 
@@ -30,37 +28,14 @@
             <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
         </div>
     </div>
-    <div class="content">
+	<div class="content">
         <div id="menu">
             <h2>Orange Bruins Baseball Team</h2>
-            <p id="overview" class="active">Overview</p>
-            <p id="calendar">Calendar</p>
-            <p id="members">Members</p>
-        </div>
-
-        <div id="overview-page" style="width:100%; overflow:hidden">
-        <div id="text" style="width: 500px; float: left;">
-            <div class="heading">Description</div>
-            <p>Local middle school baseball team for the central Miami area. Head Coach: Jim Terry.</p>
-            <div class="heading">Times</div>
-            <p>Mon 3-5</p>
-            <p>Tues 3-5</p>
-            <p>Fri 3-5</p>
-            <div class="heading">Address</div>
-            <p>77 Christmas Way</p>
-            <p>Miami, FL 32814</p>
-        </div>
-        <div id="image" style="margin-left: 500px; width:515px;">
-            <img src="../images/kids.jpg" style="width:100%;height:100%;">
+            <p id="overview" class="active" onclick="location.href='./team.html';">Overview</p>
+            <p id="calendar" onclick="location.href='./calendar/calendar.html';">Calendar</p>
+            <p id="members" onclick="location.href='./members/members.html';">Members</p>
         </div>
     </div>
-
-
-    </div>
-
-
-
-
 </div>
 </body>
 
