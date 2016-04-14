@@ -4,11 +4,20 @@ $(document).ready(function() {
     var total_days = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
     load_dates(first, total_days);
 
+    var clear_inputs = function() {
+        console.log('clearing inputs');
+        $('#ride-req-input').text('');
+        $('#seat-offer-input').text('');
+    }
+
     $('.selectable')
         .popup({
             on: 'click',
             popup: '.special.popup',
-            position: 'right center'
+            position: 'right center',
+            onHide: clear_inputs()
+            // preserve: false,
+            // closable: true
         })
     ;
 
