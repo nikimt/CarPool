@@ -4,27 +4,11 @@ $(document).ready(function() {
     var total_days = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
     load_dates(first, total_days);
 
-    // $('.selectable').click(function(evt) {
-    //     // var popup_html = 
-    //     // "<div class='ui popup'>" +
-    //     //   "<div class='header'>User Rating</div>" +
-    //     //   "<div class='ui star rating' data-rating='3'></div>" +
-    //     // "</div>";
-    //     // $('#calendar_page').append(popup_html);
-    //     // console.log(popup_html);
-    //     // $('.selectable')
-    //     //     .popup({
-    //     //         popup: '.special.popup'
-    //     //     })
-    //     // ;
-    // });
     $('.selectable')
         .popup({
             on: 'click',
             popup: '.special.popup',
             position: 'right center'
-            // title: 'My favorite dog',
-            // content: 'My favorite dog would like other dogs as much as themselves',
         })
     ;
 
@@ -32,12 +16,18 @@ $(document).ready(function() {
         .popup( {
             on: 'click',
             popup: $('#key-popup'),
-            // title: 'Key',
-            // content: 'This is what each of the symbols mean'
         })
     ;
 
-    console.log($('#this-4').find('.date-canvas'));
+    $('#ride-req-input').keypress(function (e) {
+        var key = e.which;
+        if(key == 13)  // the enter key code
+        {
+            $("#tohide").show();
+            // $('#ride-req-input').blur();
+        }
+    });
+
     $('#this-4').append("<i class='big user icon'></i>")
     $('#this-4').append("<i class='big shipping icon'></i>")
     $('#this-15').append("<i class='big user icon'></i>")
@@ -59,7 +49,6 @@ var load_dates = function(first, total_days) {
             row_html +=
             "<td class='selectable' id=this-" + currentDay + ">" +
                 "<div class='date-number'>" + currentDay + "</div" +
-                // "<div class='date-canvas'>" + "</div" +
             "</td>";
             currentDay += 1;
             col += 1;
@@ -92,7 +81,6 @@ var load_first_row = function(first, currentDay) {
         calendar_html +=
         "<td class='selectable' id='prev-" + last_month_date + "'>" +
             "<div class='last-month-date-number'>" + last_month_date + "</div>" +
-            // "<div class='date-canvas'>" + "hi" + "</div>" +
         "</td>";
         last_month_date += 1;
     }

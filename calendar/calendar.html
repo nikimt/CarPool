@@ -27,11 +27,11 @@
     </span></div>
     <div id="notifications">
         <h1>Notifications</h1>
-        <!-- <div class="notification">
+        <div class="notification hide" id='tohide'>
             <i class="material-icons">announcement</i>
             <i class="material-icons right notifX">close</i>
-            <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
-        </div> -->
+            <p id='notif-text'>You are driving Herman on Monday.</p>
+        </div>
     </div>
     <div class="content">
         <div id="menu">
@@ -106,13 +106,13 @@
         </div>
         <div>
             <div id='ride-requests'>Ask for 
-                <div class="ui input">
+                <div class="ui input" id='ride-req-input'>
                     <input type="text" placeholder="">
                 </div>
                 rides
             </div>
             <div id='seat-offers'>Offer 
-                <div class="ui input">
+                <div class="ui input" id='seat-offer-input'>
                     <input type="text" placeholder="">
                 </div>
                 seats

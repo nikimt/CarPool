@@ -42,7 +42,6 @@
 
 .last-month-date-number {
     color: #C0C0C0;
-    /*height: 20px;*/
     text-align: left;
     vertical-align: top;
     position: relative;
@@ -52,11 +51,6 @@
     vertical-align: top;
     text-align: left;
     position: relative;
-    /*position: absolute;*/
-}
-
-.date-canvas {
-    /*position: absolute;*/
 }
 
 #rides-needed {
@@ -89,6 +83,12 @@
 
 .ui.input {
     width: 50px;
+}
+
+#notif-text {
+    padding-left: 30px;
+    padding-right: 20px;
+    font-size: 17px;
 }
 
 #team-page {
