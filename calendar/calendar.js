@@ -19,7 +19,7 @@ $(document).ready(function() {
         })
     ;
 
-    $('#ride-req-input').keypress(function (e) {
+    $('#seat-offer-input').keypress(function (e) {
         var key = e.which;
         if(key == 13)  // the enter key code
         {
