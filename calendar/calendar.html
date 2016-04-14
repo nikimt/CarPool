@@ -45,11 +45,16 @@
 
 <div id="calendar-page" class="subpage">
     
-    <div class="ui label" id="month">
-        <i class="calendar icon"></i> 
-        <i class="chevron left icon"></i>
-        April &nbsp; &nbsp;
-        <i class="chevron right icon"></i>
+    <div id='menu-bar'>
+        <div class="ui label" id="month">
+            <i class="calendar icon"></i> 
+            <i class="chevron left icon"></i>
+            April &nbsp; &nbsp;
+            <i class="chevron right icon"></i>
+        </div>
+        <div id='key'>
+            <i class="help large icon"></i>
+        </div>
     </div>
     <table class="ui seven column celled table">
         <thead>
@@ -113,6 +118,14 @@
                 seats
             </div>
         </div>
+    </div>
+
+    <div class='ui popup' id='key-popup'>
+        <header style='text-align: center; font-weight: bold'>Key</header> </br>
+        <i class="big user icon" id='key-icon1'></i>
+        <p id='key1'> Someone needs a ride </p> </br> </br>
+        <i class ='big shipping icon' id='key-icon2'></i>
+        <p id='key2'> You have offered seats </p>
     </div>
 
 </div>

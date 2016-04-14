@@ -6,9 +6,35 @@
     height: 120px;
 }
 
-/*#calendar_display .selectable {
-    height: 100px;
-}*/
+#month {
+    float: left;
+}
+
+#key {
+    float: right;
+    width: 30px;
+    text-align: right;
+}
+
+#key-popup {
+    width: 250px;
+}
+
+#key1 {
+    float: right;
+}
+
+#key2 {
+    float: right;
+}
+
+#key-icon1{
+    float: left;
+}
+
+#key-icon2{
+    float: left;
+}
 
 .last-month-date-number {
     color: #C0C0C0;
@@ -20,6 +46,8 @@
 
 .date-number {
     vertical-align: top;
+    text-align: left;
+    position: relative;
     /*position: absolute;*/
 }
 

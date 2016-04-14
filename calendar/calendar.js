@@ -27,6 +27,21 @@ $(document).ready(function() {
             // content: 'My favorite dog would like other dogs as much as themselves',
         })
     ;
+
+    $('#key')
+        .popup( {
+            on: 'click',
+            popup: $('#key-popup'),
+            // title: 'Key',
+            // content: 'This is what each of the symbols mean'
+        })
+    ;
+
+    console.log($('#this-4').find('.date-canvas'));
+    $('#this-4').append("<i class='big user icon'></i>")
+    $('#this-4').append("<i class='big shipping icon'></i>")
+    $('#this-15').append("<i class='big user icon'></i>")
+    $('#this-18').append("<i class='big shipping icon'></i>")
 });
 
 var load_dates = function(first, total_days) {
@@ -42,8 +57,9 @@ var load_dates = function(first, total_days) {
         }
         else if (col > 0 && col <= 7) {
             row_html +=
-            "<td class='selectable'>" +
-                currentDay +
+            "<td class='selectable' id=this-" + currentDay + ">" +
+                "<div class='date-number'>" + currentDay + "</div" +
+                // "<div class='date-canvas'>" + "</div" +
             "</td>";
             currentDay += 1;
             col += 1;
@@ -74,15 +90,15 @@ var load_first_row = function(first, currentDay) {
     var last_month_date = 27;
     for (i = 0; i < firstWeekday; i++) {
         calendar_html +=
-        "<td class='selectable'>" +
+        "<td class='selectable' id='prev-" + last_month_date + "'>" +
             "<div class='last-month-date-number'>" + last_month_date + "</div>" +
-            // "<div class='icons'>" + "hi" + "</div>" +
+            // "<div class='date-canvas'>" + "hi" + "</div>" +
         "</td>";
         last_month_date += 1;
     }
     for (j = firstWeekday; j < 7; j++) {
         calendar_html +=
-         "<td class='selectable'>" +
+         "<td class='selectable' id='this-" + currentDay + "'>" +
             currentDay +
         "</td>";
         currentDay += 1;
