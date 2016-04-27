@@ -181,7 +181,7 @@ h3 {
 #side-nav a:hover {
 	color: #629cb7;
 	background-color: #eef4f7;
-	/*padding: 5px;*/
+	border-radius: 3px;
 }
 
 /* ==========================================================================
