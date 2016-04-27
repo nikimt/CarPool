@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CarPool</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="personalcalendar.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+
+<!-- Load JavaScript libraries -->
+<script type="text/javascript" src="../external_js/jquery-1.9.0.min.js"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
+<script type="text/javascript" src="personalcalendar.js"></script>
+</head>  
+
+<body>
+
+<div id="team-page" class="subpage">
+    <div class="header">
+        <a href="../index.html">Car<span class="bold">Pool</a>
+    </span></div>
+</div>
+
+<div id="calendar-page" class="subpage">
+    
+    <div id='menu-bar'>
+        <div class="ui label" id="month">
+            <i class="calendar icon"></i> 
+            <i class="chevron left icon"></i>
+            April &nbsp; &nbsp;
+            <i class="chevron right icon"></i>
+        </div>
+    </div>
+    <table class="ui seven column celled table">
+        <thead>
+            <tr class='center aligned'><th class="single line">Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id='calendar_display'>
+        </tbody>
+    </table>
+
+    <div id="popup" class="ui special popup">
+        <div>Today's details:</div> <br>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+    $('.notifX').on("click", function () {
+        $(this).parent().hide();
+    });
+</script>
+
+</html>

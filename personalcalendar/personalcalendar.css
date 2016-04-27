@@ -1,0 +1,85 @@
+#calendar-page {
+    padding: 15px;
+}
+
+#calendar-page tbody {
+    vertical-align: top;
+}
+
+.calendar-row {
+    height: 120px;
+}
+
+#month {
+    float: left;
+}
+
+.last-month-date-number {
+    color: #C0C0C0;
+    text-align: left;
+    vertical-align: top;
+    position: relative;
+}
+
+.date-number {
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+}
+
+#driving {
+    float: left;
+    text-align: center;
+    color: purple;
+}
+
+#request {
+    float: left;
+    text-align: center;
+    color: orange;
+}
+
+#other {
+    float: left;
+    text-align: center;
+    color: green;
+}
+
+.ui.special.popup {
+    max-width: 600px !important;
+}
+
+.ui.input {
+    width: 50px;
+}
+
+#notif-text {
+    padding-left: 30px;
+    padding-right: 20px;
+    font-size: 17px;
+}
+
+#team-page {
+    line-height: normal;
+    font-family: Avenir Next;
+}
+
+#team-page h2 {
+    line-height: normal;
+    font-family: Avenir Next;
+}
+
+#notifications {
+    line-height: normal;
+    font-family: Avenir Next;
+    padding-top: 20px;
+    font-size: 25px;
+    color: #333333;
+}
+
+#notifications h1 {
+    line-height: normal;
+    font-family: Avenir Next;
+    font-size: 25px;
+    color: #333333;
+}
