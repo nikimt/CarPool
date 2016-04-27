@@ -7,6 +7,9 @@ body {
 	padding: 0px;
 	font-family: Avenir Next !important;
 	color: #333333;
+	/*width: 100%;*/
+	/*width: 100vw;*/
+	height: 100%;
 }
 
 h1 {
@@ -30,7 +33,7 @@ h3 {
 	font-size: 40px;
 	/*font-weight: 600;*/
 	padding: 10px 3%;
-	width: 100%
+	/*width: 100%;*/
 	/*padding-left: 15%*/
 }
 
@@ -73,10 +76,10 @@ h3 {
 
 .content {
 	/*display: inline;*/
-	width: 85%;
+	/*width: 85%;*/
 	margin-left: 18%;
 	/*background-color: #edf4f7;*/
-	height: 95vh;
+	/*height: 95vh;*/
 	padding-top: 20px;
 	margin-top: 0px;
 }
@@ -160,7 +163,7 @@ h3 {
 	margin-left: 0px;
 	background-color: #a8c8d7;
 	width: 18%;
-	height: 100vh;
+	height: 91vh;
 	float: left;
 }
 
