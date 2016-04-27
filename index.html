@@ -34,17 +34,24 @@
             <p>This is a notification. It has text in it. See how much text it has? Wow. I think it needs more text. Whoa. Look at all that text. It's amazing.</p>
         </div> -->
     <!-- </div> -->
+    <div id="side-nav">
+        <div id="nav-links">
+            <a href="https://www.google.com">Overview</a>
+            <a href="https://www.google.com">Calendar</a>
+            <a href="https://www.google.com">Members</a>
+        </div>
+    </div>
 	<div class="content">
-        <div id="actions-bar">
+        <div id="actions-bar" class="hide">
             <input id="search-bar" type="text" placeholder="Search" onclick="searchClick();"></input>
             <input id="create-new" type="button" value="+ Create New" onclick="searchClick();"></input>
         </div>
-        <div id="empty-page">
+        <div id="empty-page" class="hide">
             <i class="material-icons">error</i>
             <p>It looks like you don't have any teams yet!</p>
             <p>To add a team, search their name or click <span class="bold">+ Create New</span></p>
         </div>
-        <div class="teams hide">
+        <div class="teams">
             <div class="team">
                 <h3>The Yellow Sox Baseball</h3>
                 <p>26 members</p>
