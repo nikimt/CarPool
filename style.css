@@ -27,6 +27,10 @@ h3 {
 	padding: 5px;
 }
 
+#index-page .header {
+	line-height: normal;
+}
+
 .header {
 	background-color: #004466;
 	color: #FFFFFF;
@@ -165,6 +169,7 @@ h3 {
 	width: 18%;
 	height: 91vh;
 	float: left;
+	line-height: normal;
 }
 
 #nav-links {

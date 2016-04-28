@@ -9,9 +9,11 @@
 <!-- Load style sheets -->
 <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">
 
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
 
 </head>  
 
@@ -51,7 +53,22 @@
             <p>It looks like you don't have any teams yet!</p>
             <p>To add a team, search their name or click <span class="bold">+ Create New</span></p>
         </div>
-        <div class="teams">
+        <div class="ui link cards">
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                    The Yellow Sox Baseball
+                    </div>
+                    <div class="description">
+                    </div>
+                </div>
+                <div class="ui bottom attached button">
+                    <i class="add icon"></i>
+                    Add Friend
+                </div>
+            </div>
+        </div>
+        <!-- <div class="teams">
             <div class="team">
                 <h3>The Yellow Sox Baseball</h3>
                 <p>26 members</p>
@@ -72,7 +89,7 @@
                 <p>30 members</p>
                 <p>Tues 5-7pm, Thurs 5-7pm</p>
             </div> 
-        </div>  
+        </div>   -->
     </div>
 </div>
 </body>
