@@ -97,7 +97,9 @@ h3 {
 	color: #333333;
 	height: 40px;
 	width: 50%;
-	border: none;
+	border: solid;
+	border-radius: 3px;
+	border-width: 1px;
 }
 
 #create-new {
@@ -111,6 +113,7 @@ h3 {
 	text-align: left;
 	font-style: normal;
 	margin: 8px;
+	border-radius: 3px;
 }
 
 #create-new:hover {

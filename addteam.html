@@ -7,8 +7,10 @@
 <title>CarPool</title>
 
 <!-- Load style sheets -->
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="./../../style.css" />
+<link rel="stylesheet" href="members.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
 
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
@@ -22,7 +24,7 @@
         <div class="personal">
             <i title="My teams" onclick="location.href='./index.html';" class="material-icons">group</i>
             <i title="My calendar" onclick="location.href='./personalcalendar/personalcalendar.html';" class="material-icons">date_range</i>
-            <i title="Add team" onclick="location.href='./addteam/addteam.html';" class="material-icons">person_add</i>
+            <i title="Add team" onclick="location.href='./create_group/create_group.html';" class="material-icons">person_add</i>
 
         </div>
     </div>
@@ -36,15 +38,15 @@
     <!-- </div> -->
     <div id="side-nav">
         <div id="nav-links">
-            <a class="active-nav" href="./index.html">My Teams</a>
+            <a href="./index.html">My Teams</a>
             <a href="./personalcalendar/personalcalendar.html">My Calendar</a>
-            <a href="./addteam/addteam.html">Add Teams</a>
+            <a class="active-nav" href="./create_group/create_group.html">Add Teams</a>
         </div>
     </div>
 	<div class="content">
-        <div id="actions-bar" class="hide">
+        <div id="actions-bar" >
             <input id="search-bar" type="text" placeholder="Search" onclick="searchClick();"></input>
-            <input id="create-new" type="button" value="+ Create New" onclick="location.href='../creategroup/creategroup.html';"></input>
+            <input id="create-new" type="button" value="+ Create New" onclick="searchClick();"></input>
         </div>
         <div id="empty-page" class="hide">
             <i class="material-icons">error</i>
