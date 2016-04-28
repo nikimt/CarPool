@@ -57,7 +57,7 @@ var generate_cards = function(members_list) {
     for (var i = 0; i < members_list.length; i++) {
         cards_html += 
             "<div class='column'>" +
-                "<div class='ui fluid card' id='card-" + members_list[i].id + "'>" +
+                "<div class='ui fluid link card' id='card-" + members_list[i].id + "'>" +
                     "<div class='image'>" +
                         "<img src=" + members_list[i].img_src + ">" +
                     "</div>" +
