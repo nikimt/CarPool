@@ -1,0 +1,15 @@
+#create-group-page {
+    color: #333333;
+    /*background-color: #edf4f7;*/
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+#create-group-page .ui.form .header {
+    background-color: #FFFFFF;
+    /*font-weight: 600;*/
+}
+
+label.day-label {
+    min-width: 75px;
+}
