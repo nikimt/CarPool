@@ -54,17 +54,17 @@ var load_dates = function(first, total_days) {
             "<td class='selectable' id=this-" + currentDay + ">" +
                 "<div class='date-number'>" + currentDay + "</div" +
             "</td>";
-            if (currentDay%7==4){
-                var thisday = '#this-' + currentDay;
-                console.log(thisday);
-                console.log($(thisday));
-                console.log($('#this-4'));
-                var selectedday = $(thisday);
-                day = '#this-'+currentDay.toString();
-                $('#this-4').css("background-color", "#EDF4F7");
-                $('#this-' + currentDay.toString()).css("background-color", "#EDF4F7");
-                console.log($('#this-4').css("background-color"));
-            }
+            // if (currentDay%7==4){
+            //     var thisday = '#this-' + currentDay;
+            //     console.log(thisday);
+            //     console.log($(thisday));
+            //     console.log($('#this-4'));
+            //     var selectedday = $(thisday);
+            //     day = '#this-'+currentDay.toString();
+            //     $('#this-4').css("background-color", "#EDF4F7");
+            //     $('#this-' + currentDay.toString()).css("background-color", "#EDF4F7");
+            //     console.log($('#this-4').css("background-color"));
+            // }
             currentDay += 1;
             col += 1;
         }
