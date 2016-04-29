@@ -58,7 +58,7 @@ var parse_form = function(fields) {
 }
 
 var add_to_local_storage = function(team) {
-    var current_teams = JSON.parse(localStorage.getItem('teams'));
+    var current_teams = JSON.parse(localStorage.getItem('my-teams'));
     current_teams.push(team);
-    localStorage.setItem('teams', JSON.stringify(current_teams));
+    localStorage.setItem('my-teams', JSON.stringify(current_teams));
 }

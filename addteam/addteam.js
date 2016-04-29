@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    var current_teams = JSON.parse(localStorage.getItem('my-teams'));
+    var current_teams = JSON.parse(localStorage.getItem('teams'));
     if (!current_teams) {
         current_teams = teams;
-        localStorage.setItem('my-teams', JSON.stringify(current_teams));
+        localStorage.setItem('teams', JSON.stringify(current_teams));
     }
     generate_team_cards(current_teams);
 });
@@ -34,6 +34,10 @@ var generate_team_cards = function(teams) {
                     "<div class='ui button'>" +
                         "<i class='unhide icon'></i>" +
                         "View" +
+                    "</div>" +
+                    "<div class='ui button'>" +
+                        "<i class='add icon'></i>" +
+                        "Join" +
                     "</div>" +
                 "</div>" +
             "</div>"

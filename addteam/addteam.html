@@ -9,10 +9,12 @@
 <!-- Load style sheets -->
 <link rel="stylesheet" href="../style.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css"> -->
+<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
 
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="../external_js/jquery-1.9.0.min.js"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
+<script src="./addteam.js"></script>
 
 </head>  
 
@@ -52,28 +54,8 @@
             <p>It looks like you don't have any teams yet!</p>
             <p>To add a team, search their name or click <span class="bold">+ Create New</span></p>
         </div>
-        <div class="teams">
-            <div class="team">
-                <h3>The Yellow Sox Baseball</h3>
-                <p>26 members</p>
-                <p>Tues 5-7pm, Thurs 5-7pm</p>
-            </div>  
-            <div class="team">
-                <h3>The Pink Socks Baseball</h3>
-                <p>25 members</p>
-                <p>Tues 5-7pm, Thurs 5-7pm</p>
-            </div> 
-            <div class="team" onclick="location.href='./overview/overview.html';">
-                <h3>Orange Bruins Baseball Team</h3>
-                <p>23 members</p>
-                <p>Tues 5-7pm, Thurs 5-7pm</p>
-            </div> 
-            <div class="team">
-                <h3>Sunflower Elementary Afterschool Baseball</h3>
-                <p>30 members</p>
-                <p>Tues 5-7pm, Thurs 5-7pm</p>
-            </div> 
-        </div>  
+        <div id="team-list" class="ui cards">
+        </div>
     </div>
 </div>
 </body>
