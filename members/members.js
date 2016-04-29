@@ -92,7 +92,7 @@ var generate_cards = function(members_list) {
                 "</div>" + 
             "</div>"
         ;
-        console.log(modal_html);
+        // console.log(modal_html);
     }
     cards_html += modal_html;
     var menu_element = document.getElementById("members-list");
