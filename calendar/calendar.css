@@ -1,5 +1,6 @@
 #calendar-page {
     padding: 15px;
+    /*width: 100%;*/
 }
 
 #calendar-page tbody {
@@ -114,4 +115,8 @@
     font-family: Avenir Next;
     font-size: 25px;
     color: #333333;
+}
+
+#side-nav {
+    height: 113vh;
 }
