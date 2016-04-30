@@ -41,7 +41,7 @@
         <div id="nav-links">
             <a href="../index.html">My Teams</a>
             <a href="../personalcalendar/personalcalendar.html">My Calendar</a>
-            <a class="active-nav" href="../create_group/create_group.html">Add Teams</a>
+            <a class="active-nav" href="./addteam.html">Add Teams</a>
         </div>
     </div>
     <div class="content">
@@ -55,6 +55,102 @@
             <p>To add a team, search their name or click <span class="bold">+ Create New</span></p>
         </div>
         <div id="team-list" class="ui cards">
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                        The Yellow Sox Baseball
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        26 members
+                    </div>
+                    <div class="description">
+                        Tues 5-7pm, Thurs 5-7pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button">
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <div class="ui button">
+                        <i class="add icon"></i>
+                        Join
+                    </div>
+                </div>
+            </div>
+            <div class="card cardOB">
+                <div class="content">
+                    <div class="header">
+                        Orange Bruins Baseball Team
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        23 members
+                    </div>
+                    <div class="description">
+                        Tues 5-7pm, Thurs 5-7pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button" onclick="location.href='./overview/overview.html';" >
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <div class="ui button addOB">
+                        <i class="add icon"></i>
+                        Join
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                        The Pink Socks Baseball
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        25 members
+                    </div>
+                    <div class="description">
+                        Mon 3-4pm, Tues 3-5pm, Thurs 4-5pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button">
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <div class="ui button">
+                        <i class="add icon"></i>
+                        Join
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                        Sunflower Elementary Afterschool Baseball
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        30 members
+                    </div>
+                    <div class="description">
+                        Mon 4-5pm, Wed 4-5pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button">
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <div class="ui button">
+                        <i class="add icon"></i>
+                        Join
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -69,6 +165,11 @@
 
     $('.notifX').on("click", function () {
         $(this).parent().hide();
+    });
+
+    $('.addOB').on("click", function() {
+        alert("Your request to join the Orange Bruins Baseball Team has been approved.");
+        $('.cardOB').hide();
     });
 
 </script>

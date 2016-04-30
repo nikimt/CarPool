@@ -55,6 +55,102 @@
             <p>To add a team, search their name or click <span class="bold">+ Create New</span></p>
         </div>
         <div id="team-list" class="ui cards">
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                        The Yellow Sox Baseball
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        26 members
+                    </div>
+                    <div class="description">
+                        Tues 5-7pm, Thurs 5-7pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button unavailable">
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                   <!--  <div class="ui button">
+                        <i class="add icon"></i>
+                        Join
+                    </div> -->
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                        Orange Bruins Baseball Team
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        23 members
+                    </div>
+                    <div class="description">
+                        Tues 5-7pm, Thurs 5-7pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button" onclick="location.href='./overview/overview.html';" >
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <!-- <div class="ui button addOB">
+                        <i class="add icon"></i>
+                        Join
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="card">
+                <div class="content">
+                    <div class="header">
+                        The Pink Socks Baseball
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        25 members
+                    </div>
+                    <div class="description">
+                        Mon 3-4pm, Tues 3-5pm, Thurs 4-5pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button">
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <div class="ui button">
+                        <i class="add icon"></i>
+                        Join
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="header">
+                        Sunflower Elementary Afterschool Baseball
+                    </div>
+                    <div class="meta">
+                        <i class="users icon"></i>
+                        30 members
+                    </div>
+                    <div class="description">
+                        Mon 4-5pm, Wed 4-5pm
+                    </div>
+                </div>
+                <div class="ui bottom attached buttons">
+                    <div class="ui button">
+                        <i class="unhide icon"></i>
+                        View
+                    </div>
+                    <div class="ui button">
+                        <i class="add icon"></i>
+                        Join
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -70,6 +166,10 @@
     $('.notifX').on("click", function () {
         $(this).parent().hide();
     });
+
+    $('.unavailable').on("click", function() {
+        alert("Sorry, this page is unavailable right now.");
+    })
 
 </script>
 
