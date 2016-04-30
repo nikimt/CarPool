@@ -18,8 +18,26 @@
 </head>  
 
 <body>
-<div id="team-page" class="subpage">
+<div id="team-page" class="page">
     <div id="overview-page" style="width:100%; overflow:hidden">
+
+        <div class="header">
+            <a href="../index.html">Car<span class="bold">Pool</span></a>
+            <div class="personal">
+                <i title="My teams" onclick="location.href='../index.html';" class="material-icons">group</i>
+                <i title="My calendar" onclick="location.href='../personalcalendar/personalcalendar.html';" class="material-icons">date_range</i>
+                <i title="Add team" onclick="location.href='../addteam/addteam.html';" class="material-icons">person_add</i>
+
+            </div>
+        </div>
+        <div id="side-nav">
+            <div id="nav-links">
+                <a class="active-nav" href="../overview/overview.html">Overview</a>
+                <a href="../calendar/calendar.html">Calendar</a>
+                <a href="../members/members.html">Members</a>
+            </div>
+        </div>
+        
         <button type="button" onclick="myFunction()" id="button">Join</button>
         <div id="text" style="width: 500px; float: left;">
             <div class="heading">Description</div>
