@@ -45,12 +45,24 @@
     color: green;
 }
 
+#side-nav {
+    height: 108vh;
+}
+
 .ui.special.popup {
     max-width: 600px !important;
 }
 
 .ui.input {
     width: 50px;
+}
+
+#personalcalendar-page tbody {
+    vertical-align: top;
+}
+
+#personalcalendar-page .header {
+    line-height: normal;
 }
 
 #notif-text {

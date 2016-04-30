@@ -13,7 +13,8 @@
 
 <!-- Load JavaScript libraries -->
 <script type="text/javascript" src="external_js/jquery-1.9.0.min.js"></script>
-<script src="../semantic/dist/semantic.min.js"></script>
+<script src="./semantic/dist/semantic.min.js"></script>
+<script src="./index.js"></script>
 
 </head>  
 
@@ -38,7 +39,7 @@
     <!-- </div> -->
     <div id="side-nav">
         <div id="nav-links">
-            <a class="active-nav" href="./index.html">My Teams</a>
+            <a class="active-nav" href="./index.html">My Teams!</a>
             <a href="./personalcalendar/personalcalendar.html">My Calendar</a>
             <a href="./addteam/addteam.html">Add Teams</a>
         </div>
@@ -68,14 +69,14 @@
                     </div>
                 </div>
                 <div class="ui bottom attached buttons">
-                    <div class="ui button">
+                    <div class="ui button unavailable">
                         <i class="unhide icon"></i>
                         View
                     </div>
-                    <div class="ui button">
+                   <!--  <div class="ui button">
                         <i class="add icon"></i>
                         Join
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="card">
@@ -92,17 +93,17 @@
                     </div>
                 </div>
                 <div class="ui bottom attached buttons">
-                    <div class="ui button">
+                    <div class="ui button" onclick="location.href='./overview/overview.html';" >
                         <i class="unhide icon"></i>
                         View
                     </div>
-                    <div class="ui button">
+                    <!-- <div class="ui button addOB">
                         <i class="add icon"></i>
                         Join
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="card">
+            <!-- <div class="card">
                 <div class="content">
                     <div class="header">
                         The Pink Socks Baseball
@@ -149,7 +150,7 @@
                         Join
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -165,6 +166,10 @@
     $('.notifX').on("click", function () {
         $(this).parent().hide();
     });
+
+    $('.unavailable').on("click", function() {
+        alert("Sorry, this page is unavailable right now.");
+    })
 
 </script>
 
