@@ -44,12 +44,7 @@
     <div id='menu-bar'>
         <div class="ui label" id="month">
             <i class="calendar icon"></i> 
-            <!-- <i class="chevron left icon"></i> -->
             May &nbsp; &nbsp;
-            <!-- <i class="chevron right icon"></i> -->
-        </div>
-        <div id='key'>
-            <i class="help large icon"></i>
         </div>
     </div>
     <table class="ui seven column celled table">
@@ -64,78 +59,75 @@
             </tr>
         </thead>
         <tbody id='calendar_display'>
-<!--             <tr class='calendar-row'>
-                <td class="selectable">
-                    <div class='date-number'> 1 </div>
-                    <div class='date-canvas'> </div>
-                </td>
-                <td class="selectable">
-                </td>
-                <td class="selectable">
-                </td>
-                <td class="selectable">
-                </td>
-                <td class="selectable">
-                </td>
-                <td class="selectable">
-                </td>
-                <td class="selectable">
-                </td>
-            </tr> -->
         </tbody>
     </table>
 
-<!--     <div class='ui popup' id = ''>
-        <div class='header'>User Rating</div>
-        <div class='ui star rating' data-rating='3'></div>
-    </div> -->
-
-    <div class="ui special popup">
-        <!-- <div class="header">Custom Header</div> -->
-        <div>
-            <div id='rides-needed'> 1 need rides </br> </br>
-                <i class="huge user icon"></i> </br> </br>
+    <div class='ui special popup' id='popup'>
+        The following people need rides: <br>
+        <div class='ui list' >
+            <div id='namesList'>
+              <!-- <div class='item'>
+                <div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div>
+              </div>
+              <div class='item'>
+                <div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div>
+              </div> -->
             </div>
-            <div id='open-seats'> 2 open seats </br> </br>
-                <i class ='huge shipping icon'></i> </br> </br>
+            <div class='item' id='me' style='display:none'> 
+                <div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>
+                <a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>
             </div>
-        </div>
-        <div>
-            <div id='ride-requests'>Ask for 
-                <div class="ui input">
-                    <input type="text" id='ride-req-input'>
-                </div>
-                rides
-            </div>
-            <div id='seat-offers'>Offer 
-                <div class="ui input">
-                    <input type="text" id='seat-offer-input'>
-                </div>
-                seats
-            </div>
-        </div>
+        </div>  
+        <button class='ui button' id='request' onclick="requestRide()">I need a ride</button>  
+        <button class='ui disabled button' id='disabledRequest' style="display:none">I need a ride</button>
+        <button class='ui button' id='offer' onclick='offerRide()' style='display:none' >Offer rides to selected parents</button> 
+        <button class='ui disabled button' id='disabledOffer'>Offer rides to selected parents</button> 
     </div>
-
-    <div class='ui popup' id='key-popup'>
-        <header style='text-align: center; font-weight: bold'>Key</header> </br>
-        <i class="big user icon" id='key-icon1'></i>
-        <p id='key1'> Someone needs a ride </p> </br> </br>
-        <i class ='big shipping icon' id='key-icon2'></i>
-        <p id='key2'> You have offered seats </p>
-    </div>
-
 </div>
 </div>
-
-<!-- <div id="calendar-page" class="subpage"> -->
-
 
 </body>
-
 <script type="text/javascript">
     $('.notifX').on("click", function () {
         $(this).parent().hide();
     });
-</script>
 
+    function requestRide() {
+        $('#me').show()
+        $('#request').hide()
+        $('#disabledRequest').show()
+
+    }
+    function cancelRide() {
+        $('#me').hide()
+        $('#request').show()
+        $('#disabledRequest').hide()
+    }
+
+    function offerRide() {
+        $('input[type="checkbox"]').each(function() {
+            if ($(this).is(":checked")) {
+                $(this).parent().remove();
+                $('#offer').hide()
+                $('#disabledOffer').show()
+            }
+        });
+    }
+
+    // $(':checkbox').change(function() {
+    //     var checkedAtLeastOne = false;
+    //     $('input[type="checkbox"]').each(function() {
+    //         if ($(this).is(":checked")) {
+    //             checkedAtLeastOne = true;
+    //         }
+    //     });
+    //     if (checkedAtLeastOne) {
+    //         $('#offer').show()
+    //         $('#disabledOffer').hide()
+    //     } else {
+    //         $('#offer').hide()
+    //         $('#disabledOffer').show()
+    //     }
+    // }); 
+</script>
 </html>

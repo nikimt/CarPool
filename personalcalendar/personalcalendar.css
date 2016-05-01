@@ -53,6 +53,9 @@ body {
     height: 108vh;
 }
 
+.practice {
+    background-color: #fff2e6;
+}
 .ui.special.popup {
     max-width: 600px !important;
 }

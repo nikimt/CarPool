@@ -1,15 +1,13 @@
 $(document).ready(function() {
     var today = new Date();
-    // var today = new Date(2016, 3, 17)
     var first = new Date(today.getFullYear(), today.getMonth(), 1);
     var total_days = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
     load_dates(today, first, total_days);
 
     var clear_inputs = function() {
         console.log('clearing inputs');
-        $('#ride-req-input').text('');
-        $('#seat-offer-input').text('');
     }
+
 
     $('.selectable')
         .popup({
@@ -17,31 +15,32 @@ $(document).ready(function() {
             popup: '.special.popup',
             position: 'right center',
             onHide: clear_inputs()
-            // preserve: false,
-            // closable: true
+        })
+
+        .click(function() {
+            $('#namesList').text('');
+            if (this.id == 'this-9'){
+                $('#namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>")
+
+                $(':checkbox').change(function() {
+                    var checkedAtLeastOne = false;
+                    $('input[type="checkbox"]').each(function() {
+                        if ($(this).is(":checked")) {
+                            checkedAtLeastOne = true;
+                        }
+                    });
+                    if (checkedAtLeastOne) {
+                        $('#offer').show()
+                        $('#disabledOffer').hide()
+                    } else {
+                        $('#offer').hide()
+                        $('#disabledOffer').show()
+                    }
+                }); 
+            }
         })
     ;
-
-    $('#key')
-        .popup( {
-            on: 'click',
-            popup: $('#key-popup'),
-        })
-    ;
-
-    $('#seat-offer-input').keypress(function (e) {
-        var key = e.which;
-        if(key == 13)  // the enter key code
-        {
-            $("#tohide").show();
-            // $('#ride-req-input').blur();
-        }
-    });
-
-    $('#this-4').append("<i class='big user icon'></i>")
-    $('#this-4').append("<i class='big shipping icon'></i>")
-    $('#this-15').append("<i class='big user icon'></i>")
-    $('#this-18').append("<i class='big shipping icon'></i>")
+    $('#this-9').append("<i class='big user icon'></i>")
 });
 
 var load_dates = function(today, first, total_days) {
@@ -90,7 +89,6 @@ var load_dates = function(today, first, total_days) {
         row_html += "</tr>";
         $('#calendar_display').append(row_html);
     }
-    
 }
 
 var load_first_row = function(today, first, currentDay) {
