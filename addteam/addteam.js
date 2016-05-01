@@ -34,10 +34,10 @@ var generate_team_cards = function(teams) {
                     "<div class='description'>" + times_html + "</div>" +
                 "</div>" +
                 "<div class='ui bottom attached buttons'>" +
-                    "<div class='ui button'>" +
-                        "<i class='unhide icon'></i>" +
-                        "View" +
-                    "</div>" +
+                    // "<div class='ui button'>" +
+                    //     "<i class='unhide icon'></i>" +
+                    //     "View" +
+                    // "</div>" +
                     "<div class='ui button" + teams[i].extra + "'>" +
                         "<i class='add icon'></i>" +
                         "Join" +
@@ -48,6 +48,16 @@ var generate_team_cards = function(teams) {
     }
     var menu_element = document.getElementById("team-list");
     menu_element.innerHTML = cards_html;
+
+    $('.button').on("click", function() {
+        alert("You will receive a notification when your request is approved.");
+    })
+
+    $('.addOB').on("click", function() {
+        alert("Your request to join the Orange Bruins Baseball Team has been approved.");
+        $(this).parent().parent().hide();
+        localStorage.setItem('joinedOB', JSON.stringify(true));
+    });
 }
 
 var teams = [
