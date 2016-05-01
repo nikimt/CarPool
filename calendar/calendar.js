@@ -38,9 +38,29 @@ $(document).ready(function() {
                     }
                 }); 
             }
+            if (this.id == 'this-24'){
+                $('#namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Georgia Markus</label></div></div>")
+
+                $(':checkbox').change(function() {
+                    var checkedAtLeastOne = false;
+                    $('input[type="checkbox"]').each(function() {
+                        if ($(this).is(":checked")) {
+                            checkedAtLeastOne = true;
+                        }
+                    });
+                    if (checkedAtLeastOne) {
+                        $('#offer').show()
+                        $('#disabledOffer').hide()
+                    } else {
+                        $('#offer').hide()
+                        $('#disabledOffer').show()
+                    }
+                }); 
+            }
         })
     ;
     $('#this-9').append("<i class='big user icon'></i>")
+    $('#this-24').append("<i class='big user icon'></i>")
 });
 
 var load_dates = function(today, first, total_days) {
