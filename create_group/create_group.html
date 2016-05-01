@@ -8,7 +8,7 @@
 
 <!-- Load style sheets -->
 <link rel="stylesheet" href="../style.css" />
-<link rel="stylesheet" href="create_group.css" />
+<link rel="stylesheet" href="./create_group.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
 
@@ -21,8 +21,24 @@
 
 <body>
 
-<div id="create-group-page" class="subpage">
-    <form class="ui form">
+<div id="create-group-page" class="page">
+    <div class="header">
+        <a href="index.html">Car<span class="bold">Pool</span></a>
+        <div class="personal">
+            <i title="My teams" onclick="location.href='../index.html';" class="material-icons">group</i>
+            <i title="My calendar" onclick="location.href='../personalcalendar/personalcalendar.html';" class="material-icons">date_range</i>
+            <i title="Add team" onclick="location.href='../addteam/addteam.html';" class="material-icons">person_add</i>
+
+        </div>
+    </div>
+    <div id="side-nav">
+        <div id="nav-links">
+            <a href="../index.html">My Teams</a>
+            <a href="../personalcalendar/personalcalendar.html">My Calendar</a>
+            <a class="active-nav" href="../addteam/addteam.html">Add Teams</a>
+        </div>
+    </div>
+    <form class="ui form content">
         <h4 class="ui dividing header">General Information</h4>
         <div class="field">
             <label>Group Name</label>

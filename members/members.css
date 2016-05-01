@@ -1,6 +1,11 @@
+body {
+    overflow: visible !important;
+}
+
 #team-page {
     line-height: normal;
     font-family: Avenir Next;
+    color: #333333;
 }
 
 #team-page h2 {
@@ -8,7 +13,7 @@
     font-family: Avenir Next;
 }
 
-#notifications {
+/*#notifications {
     line-height: normal;
     font-family: Avenir Next;
     padding-top: 20px;
@@ -21,15 +26,10 @@
     font-family: Avenir Next;
     font-size: 25px;
     color: #333333;
-}
+}*/
 
-#members-page {
-    color: #333333;
-    background-color: #edf4f7;
-    padding: 10px;
-}
 
-#members-page .actions-bar {
+#team-page .actions-bar {
     margin-left: 4px;
 }
 
