@@ -10,6 +10,7 @@ body {
 	/*width: 100%;*/
 	/*width: 100vw;*/
 	height: 100%;
+	overflow: hidden;
 }
 
 h1 {
@@ -175,11 +176,23 @@ h3 {
 	height: 91vh;
 	float: left;
 	line-height: normal;
+	margin-bottom: -101%;
+	padding-bottom: 101%;
+	overflow: hidden;
 }
 
 #nav-links {
 	margin-top: 20%;
 	margin-right: 3%;
+}
+
+#side-nav p {
+	color: #FFFFFF;
+	margin-top: 4%;
+	padding: 7px 15px;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 600;
 }
 
 #side-nav a {

@@ -1,8 +1,12 @@
+body {
+	overflow: visible;
+}
+
 #create-group-page {
     color: #333333;
     /*background-color: #edf4f7;*/
     background-color: #FFFFFF;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 #create-group-page .ui.form .header {
@@ -12,4 +16,12 @@
 
 label.day-label {
     min-width: 75px;
+}
+
+.content {
+	padding: 15px;
+}
+
+.header {
+	line-height: normal;
 }

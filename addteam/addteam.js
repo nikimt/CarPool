@@ -19,6 +19,9 @@ var generate_team_cards = function(teams) {
         for (var j = 0; j < teams[i].times.length; j++) {
             times_html += "<p>" + teams[i].times[j] + "</p>"
         }
+        console.log(teams[i]);
+        console.log(teams[i].name);
+        console.log(teams[i].extra);
 
         cards_html +=
             "<div class='card'>" + 
@@ -35,7 +38,7 @@ var generate_team_cards = function(teams) {
                         "<i class='unhide icon'></i>" +
                         "View" +
                     "</div>" +
-                    "<div class='ui button'>" +
+                    "<div class='ui button" + teams[i].extra + "'>" +
                         "<i class='add icon'></i>" +
                         "Join" +
                     "</div>" +
@@ -51,21 +54,25 @@ var teams = [
     {
         name: "The Yellow Sox Baseball",
         num_members: 26,
-        times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"]
+        times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
+        extra: ""
     },
     {
         name: "Orange Bruins Baseball Team",
         num_members: 23,
-        times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"]
+        times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
+        extra: " addOB"
     },
     {
         name: "The Pink Socks Baseball",
         num_members: 25,
-        times: ["Mon 3:00PM-4:00PM", "Tues 3:00PM-5:00PM", "Thurs 4:00PM-5:00PM"]
+        times: ["Mon 3:00PM-4:00PM", "Tues 3:00PM-5:00PM", "Thurs 4:00PM-5:00PM"],
+        extra: ""
     },
     {
         name: "Sunflower Elementary Afterschool Baseball",
         num_members: 30,
-        times: ["Mon 4:00PM-5:00PM", "Wed 4:00PM-5:00PM"]
+        times: ["Mon 4:00PM-5:00PM", "Wed 4:00PM-5:00PM"],
+        extra: ""
     }
 ];

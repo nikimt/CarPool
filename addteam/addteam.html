@@ -170,6 +170,7 @@
     $('.addOB').on("click", function() {
         alert("Your request to join the Orange Bruins Baseball Team has been approved.");
         $('.cardOB').hide();
+        localStorage.setItem('joinedOB', JSON.stringify(true));
     });
 
 </script>
