@@ -63,7 +63,7 @@ var teams = [
         extra: "unavailable"
     }
     // {
-    //     name: "Orange Bruins Baseball Team",
+    //     name: "Orange Bruins Baseball",
     //     num_members: 23,
     //     times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
     //     extra: "teamOB"
@@ -82,7 +82,7 @@ var teams = [
 
 // var OBTeam =
 //     {
-//         name: "Orange Bruins Baseball Team",
+//         name: "Orange Bruins Baseball",
 //         num_members: 23,
 //         times: ["Mon 2:00PM-3:00PM", "Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
 //         extra: "teamOB"
