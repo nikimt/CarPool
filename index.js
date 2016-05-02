@@ -62,28 +62,4 @@ var teams = [
         times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
         extra: "unavailable"
     }
-    // {
-    //     name: "Orange Bruins Baseball",
-    //     num_members: 23,
-    //     times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
-    //     extra: "teamOB"
-    // }
-    // {
-    //     name: "The Pink Socks Baseball",
-    //     num_members: 25,
-    //     times: ["Mon 3:00PM-4:00PM", "Tues 3:00PM-5:00PM", "Thurs 4:00PM-5:00PM"]
-    // },
-    // {
-    //     name: "Sunflower Elementary Afterschool Baseball",
-    //     num_members: 30,
-    //     times: ["Mon 4:00PM-5:00PM", "Wed 4:00PM-5:00PM"]
-    // }
 ];
-
-// var OBTeam =
-//     {
-//         name: "Orange Bruins Baseball",
-//         num_members: 23,
-//         times: ["Mon 2:00PM-3:00PM", "Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
-//         extra: "teamOB"
-//     };
