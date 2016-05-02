@@ -12,6 +12,7 @@ $(document).ready(function() {
 });
 
 var generate_team_cards = function(teams) {
+    console.log(teams);
     var cards_html = "";
     for (var i = 0; i < teams.length; i ++) {
         var member_word = " member";
@@ -81,11 +82,10 @@ var teams = [
     // }
 ];
 
-var OBTeam = [
+var OBTeam =
     {
         name: "Orange Bruins Baseball Team",
         num_members: 23,
         times: ["Mon 2:00PM-3:00PM", "Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
         extra: "teamOB"
-    }
-];
+    };
