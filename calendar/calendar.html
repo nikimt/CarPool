@@ -96,8 +96,9 @@
         $('#me').show()
         $('#request').hide()
         $('#disabledRequest').show()
-
+        localStorage.setItem('requested', JSON.stringify(true));
     }
+
     function cancelRide() {
         $('#me').hide()
         $('#request').show()
@@ -110,10 +111,11 @@
                 $(this).parent().remove();
                 $('#offer').hide()
                 $('#disabledOffer').show()
-                // localStorage.setItem('offerTo', "hi");
+                localStorage.setItem('offerTo', JSON.stringify(true));
             }
         });
     }
+
 
     // $(':checkbox').change(function() {
     //     var checkedAtLeastOne = false;

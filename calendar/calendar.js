@@ -1,13 +1,15 @@
 $(document).ready(function() {
+    localStorage.setItem('offerTo', JSON.stringify(false));
+    localStorage.setItem('requested', JSON.stringify(false));
+    localStorage.setItem('dates', JSON.stringify(false));
     var today = new Date();
     var first = new Date(today.getFullYear(), today.getMonth(), 1);
     var total_days = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
+    var dates = []
     load_dates(today, first, total_days);
 
     var clear_inputs = function() {
-        console.log('clearing inputs');
     }
-
 
     $('.selectable')
         .popup({
@@ -18,6 +20,9 @@ $(document).ready(function() {
         })
 
         .click(function() {
+            var x = this.id;
+            dates.push(x);
+            localStorage.setItem('dates', JSON.stringify(dates));
             $('#namesList').text('');
             if (this.id == 'this-9'){
                 $('#namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>")
@@ -140,4 +145,28 @@ var load_first_row = function(today, first, currentDay) {
     calendar_html += "</tr";
     $('#calendar_display').append(calendar_html);
     return currentDay;
+}
+
+function requestRide() {
+    $('#me').show()
+    $('#request').hide()
+    $('#disabledRequest').show()
+    localStorage.setItem('requested', JSON.stringify(true));
+}
+
+function cancelRide() {
+    $('#me').hide()
+    $('#request').show()
+    $('#disabledRequest').hide()
+}
+
+function offerRide() {
+    $('input[type="checkbox"]').each(function() {
+        if ($(this).is(":checked")) {
+            $(this).parent().remove();
+            $('#offer').hide()
+            $('#disabledOffer').show()
+            localStorage.setItem('offerTo', JSON.stringify(true));
+        }
+    });
 }

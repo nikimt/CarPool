@@ -31,10 +31,35 @@ $(document).ready(function() {
             }
         })
     ;
-    $('#this-9').append("<div id='driving'>You are driving Herman Li.</div> <div id='driving'>You are driving Tommy Lee.</div>")
-    $('#this-17').append("<div id='request'>Your request for a ride is pending. </div>")
+
+    // var offered = JSON.parse(localStorage.getItem('offerTo'));
+    // if (offered) {
+    //     $('#this-9').append("<div id='driving'>You are driving Herman Li.</div> <div id='driving'>You are driving Tommy Lee.</div>")
+    // }
+    // var requested = JSON.parse(localStorage.getItem('requested'));
+    // if (requested) {
+    //     $('#this-17').append("<div id='request'>Your request for a ride is pending. </div>")
+    // }
+
     $('#this-27').append("<div id='other'>Cristie Clark is driving your child.</div>")
 
+
+    var dates = JSON.parse(localStorage.getItem('dates'));
+
+    var uniqueNames = [];
+        $.each(dates, function(i, el){
+            if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+        });
+
+    var arrayLength = uniqueNames.length;
+    for (var i = 0; i < arrayLength; i++) {
+        daystring = "#"+uniqueNames[i]
+        console.log(daystring)
+        $(daystring).append("<div id='request'>Your request for a ride is pending. </div>")
+    }
+
+    
+    
 });
 
 var load_dates = function(today, first, total_days) {
