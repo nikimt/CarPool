@@ -47,7 +47,11 @@ $(document).ready(function() {
 
     var offered_24 = JSON.parse(sessionStorage.getItem('offerTo24'));
     if (offered_24) {
-        $('#this-24').append("<div id='driving'>You are driving Virginia Markus.</div> ")
+        $('#this-24').append(
+            "<i class='ui icon warning' style='color:purple;'></i>" +
+            "<div id='driving'>You are driving today</div>"
+            // "<div id='driving'>You are driving Virginia Markus.</div> "
+        );
     }
 
     $('#this-27').append(
