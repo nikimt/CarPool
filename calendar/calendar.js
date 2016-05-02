@@ -12,12 +12,12 @@ $(document).ready(function() {
     }
 
     $('.selectable')
-        .popup({
-            on: 'click',
-            popup: '.special.popup',
-            position: 'right center',
-            onHide: clear_inputs()
-        })
+        // .popup({
+        //     on: 'click',
+        //     popup: '.special.popup',
+        //     position: 'right center',
+        //     onHide: clear_inputs()
+        // })
 
         .click(function() {
             var x = this.id;
@@ -25,8 +25,8 @@ $(document).ready(function() {
             localStorage.setItem('dates', JSON.stringify(dates));
             $('#namesList').text('');
             if (this.id == 'this-9'){
-                $('#namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>")
-
+                // $('#popup-9').find('namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>")
+                // console.log('here!');
                 $(':checkbox').change(function() {
                     var checkedAtLeastOne = false;
                     $('input[type="checkbox"]').each(function() {
@@ -35,16 +35,16 @@ $(document).ready(function() {
                         }
                     });
                     if (checkedAtLeastOne) {
-                        $('#offer').show()
-                        $('#disabledOffer').hide()
+                        $('#popup-9 > #offer').show()
+                        $('#popup-9 > #disabledOffer').hide()
                     } else {
-                        $('#offer').hide()
-                        $('#disabledOffer').show()
+                        $('#popup-9 > #offer').hide()
+                        $('#popup-9 > #disabledOffer').show()
                     }
                 }); 
             }
             if (this.id == 'this-24'){
-                $('#namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Georgia Markus</label></div></div>")
+                // $('#namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Georgia Markus</label></div></div>")
 
                 $(':checkbox').change(function() {
                     var checkedAtLeastOne = false;
@@ -54,11 +54,11 @@ $(document).ready(function() {
                         }
                     });
                     if (checkedAtLeastOne) {
-                        $('#offer').show()
-                        $('#disabledOffer').hide()
+                        $('#popup-24 > #offer').show()
+                        $('#popup-24 > #disabledOffer').hide()
                     } else {
-                        $('#offer').hide()
-                        $('#disabledOffer').show()
+                        $('#popup-24 > #offer').hide()
+                        $('#popup-24 > #disabledOffer').show()
                     }
                 }); 
             }
@@ -66,6 +66,55 @@ $(document).ready(function() {
     ;
     $('#this-9').append("<i class='big user icon'></i>")
     $('#this-24').append("<i class='big user icon'></i>")
+
+    // $(function() {
+    //     $('#this-1').popup({
+    //         on: 'click',
+    //         popup: '.special.popup',
+    //         position: 'right center',
+    //         onHide: clear_inputs(),
+    //     });
+    //     $('#this-2').popup({
+    //         on: 'click',
+    //         popup: '.special.popup',
+    //         position: 'right center',
+    //         onHide: clear_inputs()
+    //     });
+    // });
+
+    for (i = 1; i <= 35; i++) {
+        popup_html = 
+                "<div class='ui special popup' id='popup-" + i + "'>" +
+                    "The following people need rides: <br>" +
+                    "<div class='ui list' >" +
+                        "<div id='namesList'>" 
+        if (i== 9) {
+            popup_html += "<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>";
+        }
+        if (i == 24) {
+            popup_html += "<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Georgia Markus</label></div></div>";
+        }
+        popup_html += "</div>" +
+                        "<div class='item' id='me' style='display:none'> " +
+                            "<div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>" +
+                            "<a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>" +
+                        "</div>" +
+                    "</div>  " +
+                    "<button class='ui button' id='request' onclick='requestRide()''>I need a ride</button>  " +
+                    "<button class='ui disabled button' id='disabledRequest' style='display:none'>I need a ride</button>" +
+                    "<button class='ui button' id='offer' onclick='offerRide()' style='display:none' >Offer rides to selected parents</button> " +
+                    "<button class='ui disabled button' id='disabledOffer'>Offer rides to selected parents</button> " +
+                "</div>"
+        $('#calendar-page').append(popup_html);
+        name = '#this-' + i;
+        popup_name = '#popup-' + i;
+        $(name).popup({
+            on: 'click',
+            popup: $(popup_name),
+            position: 'right center',
+            onHide: clear_inputs(),
+        });
+    }
 });
 
 var load_dates = function(today, first, total_days) {
@@ -102,14 +151,15 @@ var load_dates = function(today, first, total_days) {
     if (col != 0) {
         for (j = col; j < 8; j++) {
             if (j == 2 || j == 3 || j == 6) {
-                row_html += "<td class='selectable practice'>"
+                row_html += "<td class='selectable practice' "
             } else {
-                row_html += "<td class='selectable'>"
+                row_html += "<td class='selectable' "
             }
-            row_html += "<div class='last-month-date-number'>" + next_month_date + "</div>" +
-                "</td>";
+            row_html += "id=this-" + currentDay + ">" +
+                        "<div class='last-month-date-number'>" + next_month_date + "</div>" +
+                        "</td>";
             next_month_date += 1;
-
+            currentDay += 1;
         }
         row_html += "</tr>";
         $('#calendar_display').append(row_html);

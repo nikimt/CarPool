@@ -92,30 +92,6 @@
         $(this).parent().hide();
     });
 
-    function requestRide() {
-        $('#me').show()
-        $('#request').hide()
-        $('#disabledRequest').show()
-        localStorage.setItem('requested', JSON.stringify(true));
-    }
-
-    function cancelRide() {
-        $('#me').hide()
-        $('#request').show()
-        $('#disabledRequest').hide()
-    }
-
-    function offerRide() {
-        $('input[type="checkbox"]').each(function() {
-            if ($(this).is(":checked")) {
-                $(this).parent().remove();
-                $('#offer').hide()
-                $('#disabledOffer').show()
-                localStorage.setItem('offerTo', JSON.stringify(true));
-            }
-        });
-    }
-
 
     // $(':checkbox').change(function() {
     //     var checkedAtLeastOne = false;
