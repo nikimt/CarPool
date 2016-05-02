@@ -40,43 +40,44 @@
         </div>
     </div>
     <div id="calendar-page" class="content">
-    
-    <div id='menu-bar'>
-        <div class="ui label" id="month">
-            <i class="calendar icon"></i> 
-            May &nbsp; &nbsp;
-        </div>
-    </div>
-    <table class="ui seven column celled table">
-        <thead>
-            <tr class='center aligned'><th class="single line">Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-            </tr>
-        </thead>
-        <tbody id='calendar_display'>
-        </tbody>
-    </table>
-
-    <div class='ui special popup' id='popup'>
-        The following people need rides: <br>
-        <div class='ui list' >
-            <div id='namesList'></div>
-            <div class='item' id='me' style='display:none'> 
-                <div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>
-                <a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>
+        
+        <div id='menu-bar'>
+            <div class="ui label" id="month">
+                <i class="calendar icon"></i> 
+                May &nbsp; &nbsp;
             </div>
-        </div>  
-        <button class='ui button' id='request' onclick="requestRide()">I need a ride</button>  
-        <button class='ui disabled button' id='disabledRequest' style="display:none">I need a ride</button>
-        <button class='ui button' id='offer' onclick='offerRide()' style='display:none' >Offer rides to selected parents</button> 
-        <button class='ui disabled button' id='disabledOffer'>Offer rides to selected parents</button> 
+        </div>
+        <table class="ui seven column celled table">
+            <thead>
+                <tr class='center aligned'><th class="single line">Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id='calendar_display'>
+            </tbody>
+        </table>
+
+        <div class='ui special popup' id='popup'>
+            The following people need rides: <br>
+            <div class='ui list' >
+                <div id='namesList'></div>
+                <div class='item' id='me' style='display:none'> 
+                    <div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>
+                    <a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>
+                </div>
+            </div>  
+            <button class='ui button' id='request' onclick="requestRide()">I need a ride</button>  
+            <button class='ui disabled button' id='disabledRequest' style="display:none">I need a ride</button>
+            <button class='ui button' id='offer' onclick='offerRide()' style='display:none' >Offer rides to selected parents</button> 
+            <button class='ui disabled button' id='disabledOffer'>Offer rides to selected parents</button> 
+        </div>
+
     </div>
-</div>
 </div>
 
 </body>
