@@ -23,28 +23,33 @@ $(document).ready(function() {
             if (this.id == 'this-9'){
                 $('#popup').append("<div id='driving'> Orange Bruins Baseball Practice: You are driving Herman Li, son of Joanne Li. </div><br><div id='driving'> Orange Bruins Baseball Practice: You are driving Larry Style, son of Jane Style. </div>")
             }
-            if (this.id == 'this-17'){
-                $('#popup').append("<div id='request'> Orange Bruins Baseball Practice: Your request for a ride is pending. </div>")
+            // if (this.id == 'this-17'){
+            //     $('#popup').append("<div id='request'> Orange Bruins Baseball Practice: Your request for a ride is pending. </div>")
+            // }
+            if (this.id == 'this-24'){
+                $('#popup').append("<div id='driving'> Orange Bruins Baseball Practice: You are driving Virginia Markus, daughter of Georgia Markus. </div>")
             }
+
             if (this.id == 'this-27'){
                 $('#popup').append("<div id='other'> Orange Bruins Baseball Practice: Cristie Clark is driving your child. </div>")
             }
         })
     ;
 
-    // var offered = JSON.parse(localStorage.getItem('offerTo'));
-    // if (offered) {
-    //     $('#this-9').append("<div id='driving'>You are driving Herman Li.</div> <div id='driving'>You are driving Tommy Lee.</div>")
-    // }
-    // var requested = JSON.parse(localStorage.getItem('requested'));
-    // if (requested) {
-    //     $('#this-17').append("<div id='request'>Your request for a ride is pending. </div>")
-    // }
+    var offered_9 = JSON.parse(sessionStorage.getItem('offerTo9'));
+    if (offered_9) {
+        $('#this-9').append("<div id='driving'>You are driving Herman Li.</div> <div id='driving'>You are driving Tommy Lee.</div>")
+    }
+
+    var offered_24 = JSON.parse(sessionStorage.getItem('offerTo24'));
+    if (offered_24) {
+        $('#this-24').append("<div id='driving'>You are driving Virginia Markus.</div> ")
+    }
 
     $('#this-27').append("<div id='other'>Cristie Clark is driving your child.</div>")
 
 
-    var dates = JSON.parse(localStorage.getItem('dates'));
+    var dates = JSON.parse(sessionStorage.getItem('dates'));
 
     var uniqueNames = [];
         $.each(dates, function(i, el){
@@ -53,7 +58,7 @@ $(document).ready(function() {
 
     var arrayLength = uniqueNames.length;
     for (var i = 0; i < arrayLength; i++) {
-        daystring = "#"+uniqueNames[i]
+        daystring = "#this-"+uniqueNames[i]
         console.log(daystring)
         $(daystring).append("<div id='request'>Your request for a ride is pending. </div>")
     }

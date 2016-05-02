@@ -1,12 +1,15 @@
+var dates = JSON.parse(sessionStorage.getItem('dates'));
+// sessionStorage.setItem('offerTo', JSON.stringify(false));
+
 $(document).ready(function() {
-    localStorage.setItem('offerTo', JSON.stringify(false));
-    localStorage.setItem('requested', JSON.stringify(false));
-    localStorage.setItem('dates', JSON.stringify(false));
+    // sessionStorage.setItem('offerTo', JSON.stringify(false));
+    // sessionStorage.setItem('dates', JSON.stringify(false));
     var today = new Date();
     var first = new Date(today.getFullYear(), today.getMonth(), 1);
     var total_days = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
-    var dates = []
     load_dates(today, first, total_days);
+    var offered_9 = JSON.parse(sessionStorage.getItem('offerTo9'));
+    var offered_24 = JSON.parse(sessionStorage.getItem('offerTo24'));
 
     var clear_inputs = function() {
     }
@@ -20,9 +23,6 @@ $(document).ready(function() {
         // })
 
         .click(function() {
-            var x = this.id;
-            dates.push(x);
-            localStorage.setItem('dates', JSON.stringify(dates));
             $('#namesList').text('');
             if (this.id == 'this-9'){
                 // $('#popup-9').find('namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>")
@@ -88,21 +88,21 @@ $(document).ready(function() {
                     "The following people need rides: <br>" +
                     "<div class='ui list' >" +
                         "<div id='namesList'>" 
-        if (i== 9) {
+        if (i== 9 && !offered_9) {
             popup_html += "<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>";
         }
-        if (i == 24) {
+        if (i == 24 && !offered_24) {
             popup_html += "<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Georgia Markus</label></div></div>";
         }
         popup_html += "</div>" +
                         "<div class='item' id='me' style='display:none'> " +
                             "<div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>" +
-                            "<a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>" +
+                            "<a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide(" + i + ")' ><i class='remove icon'></i></a>" +
                         "</div>" +
                     "</div>  " +
-                    "<button class='ui button' id='request' onclick='requestRide()''>I need a ride</button>  " +
+                    "<button class='ui button' id='request' onclick='requestRide(" + i + ")''>I need a ride</button>  " +
                     "<button class='ui disabled button' id='disabledRequest' style='display:none'>I need a ride</button>" +
-                    "<button class='ui button' id='offer' onclick='offerRide()' style='display:none' >Offer rides to selected parents</button> " +
+                    "<button class='ui button' id='offer' onclick='offerRide(" + i + ")' style='display:none' >Offer rides to selected parents</button> " +
                     "<button class='ui disabled button' id='disabledOffer'>Offer rides to selected parents</button> " +
                 "</div>"
         $('#calendar-page').append(popup_html);
@@ -114,6 +114,21 @@ $(document).ready(function() {
             position: 'right center',
             onHide: clear_inputs(),
         });
+    }
+
+    var display_dates = JSON.parse(sessionStorage.getItem('dates'));
+
+    var uniqueNames = [];
+        $.each(display_dates, function(i, el){
+            if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+        });
+
+    var arrayLength = uniqueNames.length;
+    for (var i = 0; i < arrayLength; i++) {
+        popup = '#popup-' + uniqueNames[i];
+        $(popup).find('#me').show();
+        $(popup).find('#request').hide();
+        $(popup).find('#disabledRequest').show();
     }
 });
 
@@ -197,26 +212,41 @@ var load_first_row = function(today, first, currentDay) {
     return currentDay;
 }
 
-function requestRide() {
-    $('#me').show()
-    $('#request').hide()
-    $('#disabledRequest').show()
-    localStorage.setItem('requested', JSON.stringify(true));
+function requestRide(n) {
+    popup = '#popup-' + n;
+    $(popup).find('#me').show();
+    $(popup).find('#request').hide();
+    $(popup).find('#disabledRequest').show();
+    dates.push(n);
+    sessionStorage.setItem('dates', JSON.stringify(dates));
 }
 
-function cancelRide() {
-    $('#me').hide()
-    $('#request').show()
-    $('#disabledRequest').hide()
+function cancelRide(n) {
+    popup = '#popup-' + n;
+    $(popup).find('#me').hide();
+    $(popup).find('#request').show();
+    $(popup).find('#disabledRequest').hide();
+    for(var i = dates.length - 1; i >= 0; i--) {
+        if(dates[i] === n) {
+           dates.splice(i, 1);
+        }
+    }
+    sessionStorage.setItem('dates', JSON.stringify(dates));
 }
 
-function offerRide() {
+function offerRide(n) {
+    popup = '#popup-' + n;
     $('input[type="checkbox"]').each(function() {
         if ($(this).is(":checked")) {
             $(this).parent().remove();
-            $('#offer').hide()
-            $('#disabledOffer').show()
-            localStorage.setItem('offerTo', JSON.stringify(true));
+            $(popup).find('#offer').hide();
+            $(popup).find('#disabledOffer').show();
+            if (n == 9) {
+                sessionStorage.setItem('offerTo9', JSON.stringify(true));
+            } else if (n == 24) {
+                sessionStorage.setItem('offerTo24', JSON.stringify(true));
+            }
+            
         }
     });
 }
