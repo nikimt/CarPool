@@ -1,18 +1,25 @@
 $(document).ready(function() {
-    // var current_teams = JSON.parse(localStorage.getItem('my-teams'));
-    var joinOB = JSON.parse(localStorage.getItem('joinedOB'));
-    if (joinOB) {
-        teams.push(OBTeam);
-    }
-    // if (!current_teams) {
-    var current_teams = teams;
-    localStorage.setItem('my-teams', JSON.stringify(current_teams));
+    var current_teams = JSON.parse(localStorage.getItem('my-teams'));
+    // var joinOB = JSON.parse(localStorage.getItem('joinedOB'));
+    // if (joinOB) {
+    //     teams.push(OBTeam);
     // }
+    if (!current_teams) {
+        var current_teams = teams;
+        localStorage.setItem('my-teams', JSON.stringify(current_teams));
+    }
     generate_team_cards(current_teams);
+
+    $('.unavailable').on("click", function() {
+        alert("Sorry, this page is unavailable right now.");
+    });
+
+    $('.teamOB').on("click", function() {
+        window.location.href = "./overview/overview.html";
+    })
 });
 
 var generate_team_cards = function(teams) {
-    console.log(teams);
     var cards_html = "";
     for (var i = 0; i < teams.length; i ++) {
         var member_word = " member";
@@ -24,7 +31,6 @@ var generate_team_cards = function(teams) {
         for (var j = 0; j < teams[i].times.length; j++) {
             times_html += "<p>" + teams[i].times[j] + "</p>"
         }
-        console.log(teams[i]);
 
         cards_html +=
             "<div class='card'>" + 
@@ -47,14 +53,6 @@ var generate_team_cards = function(teams) {
     }
     var menu_element = document.getElementById("team-list");
     menu_element.innerHTML = cards_html;
-
-    $('.unavailable').on("click", function() {
-        alert("Sorry, this page is unavailable right now.");
-    });
-
-    $('.teamOB').on("click", function() {
-        window.location.href = "./overview/overview.html";
-    })
 }
 
 var teams = [
@@ -82,10 +80,10 @@ var teams = [
     // }
 ];
 
-var OBTeam =
-    {
-        name: "Orange Bruins Baseball Team",
-        num_members: 23,
-        times: ["Mon 2:00PM-3:00PM", "Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
-        extra: "teamOB"
-    };
+// var OBTeam =
+//     {
+//         name: "Orange Bruins Baseball Team",
+//         num_members: 23,
+//         times: ["Mon 2:00PM-3:00PM", "Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
+//         extra: "teamOB"
+//     };

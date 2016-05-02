@@ -1,12 +1,11 @@
 $(document).ready(function() {
-    $('.ui.form')
-        .form({
-            fields: {
-                "team-name": 'empty',
-                "description": 'empty',
-
-            }
-        })
+    // $('.ui.form')
+    //     .form({
+    //         fields: {
+    //             "team-name": 'empty',
+    //             "description": 'empty',
+    //         }
+    //     })
 
     $("#create-group-page .submit.button").click(function(evt) {
         var fields = $("#create-group-page .form").form('get values');
@@ -22,18 +21,13 @@ $(document).ready(function() {
     $("#create-group-page .general.reset.button").click(function(evt) {
         $("#create-group-page .form").form('reset');
     });
-
-    $("#create-group-page .specific.reset.button").click(function(evt) {
-        $(evt.target.parentElement).form('reset');
-    });
-
-
 });
 
 var parse_form = function(fields) {
     var team = {
         name: fields["team-name"],
         num_members: 1,
+        extra: "unavailable"
     };
 
     var times = [];
