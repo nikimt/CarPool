@@ -42,3 +42,7 @@ body {
 .ui.modal.members-modal .header {
     background-color: #FFFFFF;
 }
+
+.ui.modal.members-modal .image.content {
+    width: initial;
+}

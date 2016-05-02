@@ -23,7 +23,7 @@ var get_visible_members = function(members_list, search_val) {
     var visible_members = [];
     for (var i = 0; i < members_list.length; i++) {
         var member = members_list[i];
-        if (member.name.toLowerCase().indexOf(search_val) != -1) {
+        if (member.name.toLowerCase().indexOf(search_val.toLowerCase()) != -1) {
             visible_members.push(member);
         }
     }
@@ -40,6 +40,7 @@ var update_cards = function(visible_members) {
         for (var j = 0; j < visible_members.length; j++) {
             if (content.text() == visible_members[j].name) {
                 is_hide = false;
+                break;
             }
         }
         if (is_hide) {
@@ -75,7 +76,7 @@ var generate_cards = function(members_list) {
                     "<div class='image'>" +
                         "<img src=" + members_list[i].img_src + ">" +
                     "</div>" +
-                    "<div class='description ui grid two column'>" +
+                    "<div class='description ui grid two columns'>" +
                         "<div class='column'>" +
                             "<h5 class='ui header'>Phone Number</h5>" +
                             "<p>" + members_list[i].phone_number + "</p>" +
@@ -137,7 +138,7 @@ var load_members = function () {
             name: 'Leslie Lemmelson',
             img_src: '../images/hedgehog6.jpg',
             phone_number: '444-299-7366',
-            email_address: 'leslemmelson@lemmelsonlabs.com',
+            email_address: 'leslie@lemmelsonlabs.com',
             child_name: 'Harold Lemmelson',
             home_address: '123 Some Street, FL 12345'
         },

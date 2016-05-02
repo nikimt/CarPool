@@ -1,4 +1,8 @@
 var dates = JSON.parse(sessionStorage.getItem('dates'));
+if (dates === null) {
+    var dates = [];
+}
+// var dates = [];
 // sessionStorage.setItem('offerTo', JSON.stringify(false));
 
 $(document).ready(function() {
@@ -82,6 +86,8 @@ $(document).ready(function() {
     //     });
     // });
 
+    // $('.')
+
     for (i = 1; i <= 35; i++) {
         popup_html = 
                 "<div class='ui special popup' id='popup-" + i + "'>" +
@@ -117,6 +123,7 @@ $(document).ready(function() {
     }
 
     var display_dates = JSON.parse(sessionStorage.getItem('dates'));
+    console.log(display_dates);
 
     var uniqueNames = [];
         $.each(display_dates, function(i, el){
