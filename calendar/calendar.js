@@ -1,17 +1,12 @@
 $(document).ready(function() {
     localStorage.setItem('offerTo', JSON.stringify(false));
     localStorage.setItem('requested', JSON.stringify(false));
-    // localStorage.setItem('dates', JSON.stringify(false));
+    localStorage.setItem('dates', JSON.stringify(false));
     var today = new Date();
     var first = new Date(today.getFullYear(), today.getMonth(), 1);
     var total_days = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
-    // var dates = []
+    var dates = []
     load_dates(today, first, total_days);
-
-    var dates = JSON.parse(localStorage.getItem('dates'));
-    if (!dates) {
-        dates = [];
-    }
 
     var clear_inputs = function() {
     }
@@ -24,10 +19,10 @@ $(document).ready(function() {
         //     onHide: clear_inputs()
         // })
 
-        .click(function(evt) {
+        .click(function() {
             var x = this.id;
-            // dates.push(x);
-            // localStorage.setItem('dates', JSON.stringify(dates));
+            dates.push(x);
+            localStorage.setItem('dates', JSON.stringify(dates));
             $('#namesList').text('');
             if (this.id == 'this-9'){
                 // $('#popup-9').find('namesList').append("<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div></div><div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div></div>")
@@ -87,8 +82,6 @@ $(document).ready(function() {
     //     });
     // });
 
-    // $('.')
-
     for (i = 1; i <= 35; i++) {
         popup_html = 
                 "<div class='ui special popup' id='popup-" + i + "'>" +
@@ -102,15 +95,15 @@ $(document).ready(function() {
             popup_html += "<div class='item'><div class='ui checked checkbox'><input type='checkbox'><label>Georgia Markus</label></div></div>";
         }
         popup_html += "</div>" +
-                        "<div class='item' id='me-" + i + "' style='display:none'> " +
+                        "<div class='item' id='me' style='display:none'> " +
                             "<div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>" +
-                            "<a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide(" + i + ")' ><i class='remove icon'></i></a>" +
+                            "<a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>" +
                         "</div>" +
                     "</div>  " +
-                    "<button class='ui button' id='request-" + i + "' onclick='requestRide(" + i + ")''>I need a ride</button>  " +
+                    "<button class='ui button' id='request' onclick='requestRide()''>I need a ride</button>  " +
                     "<button class='ui disabled button' id='disabledRequest' style='display:none'>I need a ride</button>" +
-                    "<button class='ui button' id='offer-" + i + "' onclick='offerRide(" + i + ")' style='display:none' >Offer rides to selected parents</button> " +
-                    "<button class='ui disabled button' id='disabledOffer-" + i + "'>Offer rides to selected parents</button> " +
+                    "<button class='ui button' id='offer' onclick='offerRide()' style='display:none' >Offer rides to selected parents</button> " +
+                    "<button class='ui disabled button' id='disabledOffer'>Offer rides to selected parents</button> " +
                 "</div>"
         $('#calendar-page').append(popup_html);
         name = '#this-' + i;
@@ -204,27 +197,20 @@ var load_first_row = function(today, first, currentDay) {
     return currentDay;
 }
 
-function requestRide(id) {
-    var dates = JSON.parse(localStorage.getItem('dates'));
-    if (!dates) {
-        dates = [];
-    }
-    dates.push("this-" + id);
-    localStorage.setItem('dates', JSON.stringify(dates));
-
-    $('#me-' + id).show()
-    $('#request-' + id).hide()
+function requestRide() {
+    $('#me').show()
+    $('#request').hide()
     $('#disabledRequest').show()
     localStorage.setItem('requested', JSON.stringify(true));
 }
 
-function cancelRide(id) {
-    $('#me-' + id).hide()
-    $('#request-' + id).show()
+function cancelRide() {
+    $('#me').hide()
+    $('#request').show()
     $('#disabledRequest').hide()
 }
 
-function offerRide(id) {
+function offerRide() {
     $('input[type="checkbox"]').each(function() {
         if ($(this).is(":checked")) {
             $(this).parent().remove();
