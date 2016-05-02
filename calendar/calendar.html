@@ -65,14 +65,7 @@
     <div class='ui special popup' id='popup'>
         The following people need rides: <br>
         <div class='ui list' >
-            <div id='namesList'>
-              <!-- <div class='item'>
-                <div class='ui checked checkbox'><input type='checkbox'><label>Joanne Li</label></div>
-              </div>
-              <div class='item'>
-                <div class='ui checked checkbox'><input type='checkbox'><label>Jane Style</label></div>
-              </div> -->
-            </div>
+            <div id='namesList'></div>
             <div class='item' id='me' style='display:none'> 
                 <div class='ui disabled checkbox'><input type='checkbox' disabled='disabled'><label>Karen Young (me)</label></div>
                 <a href='#'class='remove' id='removeIcon' style='float:right' onclick='cancelRide()' ><i class='remove icon'></i></a>
@@ -93,24 +86,25 @@
     });
 
     function requestRide() {
-        $('#me').show()
-        $('#request').hide()
-        $('#disabledRequest').show()
+        $('#me').show();
+        $('#request').hide();
+        $('#disabledRequest').show();
 
     }
     function cancelRide() {
-        $('#me').hide()
-        $('#request').show()
-        $('#disabledRequest').hide()
+        $('#me').hide();
+        $('#request').show();
+        $('#disabledRequest').hide();
     }
 
     function offerRide() {
         $('input[type="checkbox"]').each(function() {
+            rides_offered = {};
             if ($(this).is(":checked")) {
                 $(this).parent().remove();
                 $('#offer').hide()
                 $('#disabledOffer').show()
-                // localStorage.setItem('offerTo', "hi");
+                rides_offered
             }
         });
     }

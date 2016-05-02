@@ -10,12 +10,12 @@ $(document).ready(function() {
 
 
     $('.selectable')
-        .popup({
-            on: 'click',
-            popup: '.special.popup',
-            position: 'right center',
-            onHide: clear_inputs()
-        })
+        // .popup({
+        //     on: 'click',
+        //     popup: '.special.popup',
+        //     position: 'right center',
+        //     onHide: clear_inputs()
+        // })
 
         .click(function() {
             $('#namesList').text('');
@@ -61,6 +61,22 @@ $(document).ready(function() {
     ;
     $('#this-9').append("<i class='big user icon'></i>")
     $('#this-24').append("<i class='big user icon'></i>")
+
+    // $(function() {
+    //     $('#this-1').popup({
+    //         on: 'click',
+    //         popup: '.special.popup',
+    //         position: 'right center',
+    //         onHide: clear_inputs(),
+    //         id: 
+    //     });
+    //     $('#this-2').popup({
+    //         on: 'click',
+    //         popup: '.special.popup',
+    //         position: 'right center',
+    //         onHide: clear_inputs()
+    //     });
+    // });
 });
 
 var load_dates = function(today, first, total_days) {
