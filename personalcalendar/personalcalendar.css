@@ -102,3 +102,12 @@ body {
     font-size: 25px;
     color: #333333;
 }
+
+#calendar-page .calendar-row .selectable i.icon {
+    width: 100%;
+    font-size: 25px;
+}
+
+#calendar-page .calendar-row td {
+    padding: 3px;
+}

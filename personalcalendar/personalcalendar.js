@@ -38,7 +38,11 @@ $(document).ready(function() {
 
     var offered_9 = JSON.parse(sessionStorage.getItem('offerTo9'));
     if (offered_9) {
-        $('#this-9').append("<div id='driving'>You are driving Herman Li.</div> <div id='driving'>You are driving Tommy Lee.</div>")
+        $('#this-9').append(
+            "<i class='ui icon warning' style='color:purple;'></i>" +
+            "<div id='driving'>You are driving today</div>"
+            // "<div id='driving'>You are driving Herman Li.</div> <div id='driving'>You are driving Tommy Lee.</div>"
+        );
     }
 
     var offered_24 = JSON.parse(sessionStorage.getItem('offerTo24'));
@@ -46,7 +50,10 @@ $(document).ready(function() {
         $('#this-24').append("<div id='driving'>You are driving Virginia Markus.</div> ")
     }
 
-    $('#this-27').append("<div id='other'>Cristie Clark is driving your child.</div>")
+    $('#this-27').append(
+        "<i class='ui icon checkmark' style='color:green;'></i>" +
+        "<div id='other'>Cristie Clark is driving your child.</div>"
+    );
 
 
     var dates = JSON.parse(sessionStorage.getItem('dates'));
@@ -60,7 +67,10 @@ $(document).ready(function() {
     for (var i = 0; i < arrayLength; i++) {
         daystring = "#this-"+uniqueNames[i]
         console.log(daystring)
-        $(daystring).append("<div id='request'>Your request for a ride is pending. </div>")
+        $(daystring).append(
+            "<i class='ui icon help' style='color:orange;'></i>" +
+            "<div id='request'>Your request for a ride is pending. </div>"
+        );
     }
 
     
