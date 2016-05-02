@@ -23,7 +23,7 @@ $(document).ready(function() {
     $('.teamOB').on("click", function() {
         alert("Your request to join the Orange Bruins Baseball Team has been approved.");
         $(this).parent().parent().hide();
-        add_team();
+        current_teams = add_team(current_teams);
     });
 });
 
@@ -58,7 +58,7 @@ var update_cards = function(visible_teams) {
     }
 }
 
-var add_team = function() {
+var add_team = function(current_teams) {
     // Hard coded to only add Orange Bruins for now
     var my_teams = JSON.parse(localStorage.getItem('my-teams'));
     my_teams.push(teams[3]);   // Orange Bruins in index 3 of teams
@@ -66,6 +66,9 @@ var add_team = function() {
 
     var new_teams = teams.slice(0, 3);
     localStorage.setItem('teams', JSON.stringify(new_teams));
+
+    current_teams = current_teams.slice(0, 3);
+    return current_teams;
 }
 
 var generate_team_cards = function(teams) {
