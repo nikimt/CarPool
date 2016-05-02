@@ -1,9 +1,13 @@
 $(document).ready(function() {
-    var current_teams = JSON.parse(localStorage.getItem('teams'));
-    if (!current_teams) {
-        current_teams = teams;
+    // var current_teams = JSON.parse(localStorage.getItem('teams'));
+    // if (!current_teams) {
+        var joinOB = JSON.parse(localStorage.getItem('joinedOB'));
+        if (joinOB != true) {
+            teams.push(OBTeam);
+        }
+        var current_teams = teams;
         localStorage.setItem('teams', JSON.stringify(current_teams));
-    }
+    // }
     generate_team_cards(current_teams);
 });
 
@@ -68,12 +72,6 @@ var teams = [
         extra: ""
     },
     {
-        name: "Orange Bruins Baseball Team",
-        num_members: 23,
-        times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
-        extra: " addOB"
-    },
-    {
         name: "The Pink Socks Baseball",
         num_members: 25,
         times: ["Mon 3:00PM-4:00PM", "Tues 3:00PM-5:00PM", "Thurs 4:00PM-5:00PM"],
@@ -86,3 +84,11 @@ var teams = [
         extra: ""
     }
 ];
+
+var OBTeam = 
+    {
+        name: "Orange Bruins Baseball Team",
+        num_members: 23,
+        times: ["Tues 5:00PM-7:00PM", "Thurs 5:00PM-7:00PM"],
+        extra: " addOB"
+    };
